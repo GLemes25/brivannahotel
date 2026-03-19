@@ -1,6 +1,7 @@
 "use client";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -51,23 +52,13 @@ export default function Header() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-background font-bold text-xl">H</span>
-              </div>
-              <div className="flex flex-col">
-                <span
-                  className="text-foreground tracking-wide"
-                  style={{ fontSize: "1.125rem", fontWeight: 600 }}
-                >
-                  Hotel Central
-                </span>
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.75rem", fontWeight: 300 }}
-                >
-                  Campo Grande
-                </span>
-              </div>
+              <Image
+                src="/brivanna_logo.png"
+                alt="Brivanna Hotel Logo"
+                width={260}
+                height={60}
+                priority
+              />
             </motion.div>
 
             {/* Desktop Navigation */}

@@ -7,7 +7,7 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = "Hotel Central - Campo Grande, MS | Conforto e Localização Privilegiada",
+  title = "Hotel Brivanna - Campo Grande, MS | Conforto e Localização Privilegiada",
   description = "Hotel no centro de Campo Grande, MS. Ideal para viagens de trabalho. Quartos confortáveis, localização estratégica e excelente custo-benefício. Reserve agora!",
 }: SEOProps) {
   useEffect(() => {

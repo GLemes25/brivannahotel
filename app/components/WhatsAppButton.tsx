@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export default function WhatsAppButton() {
   const whatsappNumber = "5567999999999"; // Replace with actual number
   const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de fazer uma reserva no Hotel Central.",
+    "Olá! Gostaria de fazer uma reserva no Hotel Brivanna.",
   );
 
   return (

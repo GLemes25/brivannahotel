@@ -78,7 +78,7 @@ export default function About() {
               >
                 O{" "}
                 <strong className="text-primary" style={{ fontWeight: 500 }}>
-                  Hotel Central
+                  Hotel Brivanna
                 </strong>{" "}
                 está localizado em uma das áreas mais privilegiadas de Campo
                 Grande, oferecendo acesso rápido aos principais pontos

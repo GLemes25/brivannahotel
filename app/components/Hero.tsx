@@ -155,7 +155,7 @@ export default function Hero() {
                 className="text-muted-foreground"
                 style={{ fontSize: "0.875rem", fontWeight: 300 }}
               >
-                Central
+                Brivanna
               </div>
             </div>
             <div className="text-center">

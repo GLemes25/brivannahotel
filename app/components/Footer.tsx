@@ -32,7 +32,7 @@ export default function Footer() {
                   className="text-foreground tracking-wide"
                   style={{ fontSize: "1.125rem", fontWeight: 600 }}
                 >
-                  Hotel Central
+                  Hotel Brivanna
                 </span>
                 <span
                   className="text-muted-foreground"
@@ -165,7 +165,7 @@ export default function Footer() {
                   className="text-muted-foreground break-all"
                   style={{ fontSize: "0.9375rem", fontWeight: 300 }}
                 >
-                  contato@hotelcentral.com.br
+                  contato@hotelBrivanna.com.br
                 </span>
               </li>
               <li className="flex items-start space-x-3">
@@ -237,7 +237,7 @@ export default function Footer() {
               className="text-muted-foreground text-center md:text-left"
               style={{ fontSize: "0.875rem", fontWeight: 300 }}
             >
-              © {currentYear} Hotel Central. Todos os direitos reservados.
+              © {currentYear} Hotel Brivanna. Todos os direitos reservados.
             </p>
             <p
               className="text-muted-foreground flex items-center space-x-2"

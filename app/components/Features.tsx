@@ -49,7 +49,7 @@ export default function Features() {
             style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 600 }}
           >
             <span className="text-foreground">Por que escolher o </span>
-            <span className="text-primary">Hotel Central?</span>
+            <span className="text-primary">Hotel Brivanna ?</span>
           </h2>
           <p
             className="text-muted-foreground max-w-2xl mx-auto"

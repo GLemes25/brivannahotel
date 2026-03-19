@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 export default function Contact() {
   const whatsappNumber = "5567999999999"; // Replace with actual number
   const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de fazer uma reserva no Hotel Central.",
+    "Olá! Gostaria de fazer uma reserva no Hotel Brivanna.",
   );
 
   return (
@@ -186,7 +186,7 @@ export default function Contact() {
                     className="text-muted-foreground"
                     style={{ fontSize: "0.9375rem", fontWeight: 300 }}
                   >
-                    contato@hotelcentral.com.br
+                    contato@hotelbrivanna.com.br
                   </p>
                 </div>
               </motion.div>
