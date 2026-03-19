@@ -1,5 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import { MapPin } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -41,16 +42,14 @@ export default function PageLoader() {
             </motion.h2>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
               className="flex items-center gap-2 px-4 py-1.5 rounded-full 
-             bg-white/5 border border-white/10 backdrop-blur-sm my-10"
+             bg-white/5 border border-white/10 backdrop-blur-sm m-10"
             >
-              {/* Dot indicador */}
-              <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse" />
+              <MapPin className="w-3.5 h-3.5 text-lime-400" />
 
-              {/* Texto */}
               <span className="text-white/70 text-xs tracking-widest uppercase font-medium">
                 Campo Grande • MS
               </span>
