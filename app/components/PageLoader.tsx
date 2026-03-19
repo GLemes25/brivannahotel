@@ -1,5 +1,6 @@
 "use client";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function PageLoader() {
@@ -23,22 +24,6 @@ export default function PageLoader() {
           className="fixed inset-0 z-[100] bg-background flex items-center justify-center"
         >
           <div className="text-center">
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto shadow-2xl shadow-primary/30">
-                <span
-                  className="text-primary-foreground"
-                  style={{ fontSize: "2.5rem", fontWeight: 700 }}
-                >
-                  H
-                </span>
-              </div>
-            </motion.div>
-
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -46,18 +31,30 @@ export default function PageLoader() {
               className="text-foreground mb-2"
               style={{ fontSize: "1.5rem", fontWeight: 600 }}
             >
-              Hotel Central
+              <Image
+                src="/brivanna_logo.png"
+                alt="Brivanna Hotel Logo"
+                width={260}
+                height={60}
+                priority
+              />
             </motion.h2>
 
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-muted-foreground mb-8"
-              style={{ fontSize: "0.9375rem", fontWeight: 300 }}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full 
+             bg-white/5 border border-white/10 backdrop-blur-sm my-10"
             >
-              Campo Grande, MS
-            </motion.p>
+              {/* Dot indicador */}
+              <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse" />
+
+              {/* Texto */}
+              <span className="text-white/70 text-xs tracking-widest uppercase font-medium">
+                Campo Grande • MS
+              </span>
+            </motion.div>
 
             {/* Loading bar */}
             <div className="w-64 h-1 bg-secondary rounded-full overflow-hidden mx-auto">
