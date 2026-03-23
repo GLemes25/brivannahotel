@@ -24,7 +24,7 @@ export default function PageLoader() {
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-[100] bg-background flex items-center justify-center"
         >
-          <div className="text-center">
+          <div className="flex flex-col items-center justify-center text-center">
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -33,10 +33,10 @@ export default function PageLoader() {
               style={{ fontSize: "1.5rem", fontWeight: 600 }}
             >
               <Image
-                src="/brivanna_logo.png"
+                src="/brivanna_white_logo.svg"
                 alt="Brivanna Hotel Logo"
-                width={260}
-                height={60}
+                width={200}
+                height={30}
                 priority
               />
             </motion.h2>

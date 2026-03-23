@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       transition={{ delay: 2, type: "spring", stiffness: 260, damping: 20 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="hidden md:flex fixed bottom-8 left-8 z-50 w-16 h-16 bg-[#25D366] rounded-full shadow-2xl items-center justify-center group hover:shadow-[#25D366]/50 transition-shadow duration-300"
+      className="hidden md:flex fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] rounded-full shadow-2xl items-center justify-center group hover:shadow-[#25D366]/50 transition-shadow duration-300"
       aria-label="Fale conosco pelo WhatsApp"
     >
       {/* Imagem do ícone */}
@@ -40,7 +40,7 @@ export default function WhatsAppButton() {
 
       {/* Tooltip */}
       <div
-        className="absolute left-full ml-4 bg-[#25D366] text-white px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-lg"
+        className="absolute right-full ml-4 bg-[#25D366] text-white px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-lg"
         style={{ fontSize: "0.875rem", fontWeight: 500 }}
       >
         Fale conosco no WhatsApp
