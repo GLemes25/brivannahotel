@@ -40,7 +40,7 @@ export default function Header() {
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#102c31]/95 backdrop-blur-md shadow-lg border-b border-primary/20"
+            ? "bg-[#102c31]/95 backdrop-blur-md shadow-lg ]"
             : "bg-transparent"
         }`}
       >
