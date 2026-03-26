@@ -27,7 +27,7 @@ export default function About() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
               <img
-                src="https://images.unsplash.com/photo-1759038085950-1234ca8f5fed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3RlbCUyMHJlY2VwdGlvbiUyMG1vZGVybiUyMGRlc2t8ZW58MXx8fHwxNzczOTQ4ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774557268/brivannaReception_cx53tp.jpg"
                 alt="Hotel Reception"
                 className="w-full h-[500px] object-cover"
               />
@@ -47,17 +47,8 @@ export default function About() {
             className="space-y-6"
           >
             <div>
-              <div className="inline-flex items-center bg-primary/10 border border-primary/30 rounded-full px-4 py-1.5 mb-4">
-                <span
-                  className="text-primary"
-                  style={{ fontSize: "0.875rem", fontWeight: 500 }}
-                >
-                  Sobre Nós
-                </span>
-              </div>
-
               <h2
-                className="mb-4"
+                className="mb-4 mt-1"
                 style={{
                   fontSize: "clamp(2rem, 4vw, 2.75rem)",
                   fontWeight: 600,
@@ -74,34 +65,30 @@ export default function About() {
             <div className="space-y-4">
               <p
                 className="text-foreground/90 leading-relaxed"
-                style={{ fontSize: "1.0625rem", fontWeight: 300 }}
+                style={{ fontSize: "1.05rem", fontWeight: 300 }}
               >
                 O{" "}
                 <strong className="text-primary" style={{ fontWeight: 500 }}>
                   Hotel Brivanna
                 </strong>{" "}
-                está localizado em uma das áreas mais privilegiadas de Campo
-                Grande, oferecendo acesso rápido aos principais pontos
-                comerciais e empresariais da cidade.
+                está situado em uma localização estratégica de Campo Grande, com
+                fácil acesso aos principais centros comerciais e empresariais.
               </p>
 
               <p
                 className="text-muted-foreground leading-relaxed"
                 style={{ fontSize: "1rem", fontWeight: 300 }}
               >
-                Com 27 quartos confortáveis e uma equipe dedicada, trabalhamos
-                continuamente para proporcionar uma experiência de hospedagem
-                que equilibra qualidade, praticidade e acessibilidade.
+                Oferecemos 27 acomodações confortáveis, aliadas a um atendimento
+                atencioso e eficiente.
               </p>
 
               <p
                 className="text-muted-foreground leading-relaxed"
                 style={{ fontSize: "1rem", fontWeight: 300 }}
               >
-                Estamos passando por um processo de modernização para elevar
-                ainda mais o padrão de nossos serviços, sempre mantendo nosso
-                compromisso com o melhor custo-benefício para profissionais em
-                viagem.
+                Em constante modernização, buscamos elevar nossa experiência,
+                mantendo excelência e ótimo custo-benefício.
               </p>
             </div>
 

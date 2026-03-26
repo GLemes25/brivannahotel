@@ -71,18 +71,18 @@ export default function Header() {
                 Início
               </button>
               <button
-                onClick={() => scrollToSection("quartos")}
-                className="text-foreground hover:text-primary transition-colors duration-200"
-                style={{ fontSize: "0.9375rem", fontWeight: 400 }}
-              >
-                Quartos
-              </button>
-              <button
                 onClick={() => scrollToSection("sobre")}
                 className="text-foreground hover:text-primary transition-colors duration-200"
                 style={{ fontSize: "0.9375rem", fontWeight: 400 }}
               >
                 Sobre
+              </button>
+              <button
+                onClick={() => scrollToSection("quartos")}
+                className="text-foreground hover:text-primary transition-colors duration-200"
+                style={{ fontSize: "0.9375rem", fontWeight: 400 }}
+              >
+                Quartos
               </button>
               <button
                 onClick={() => scrollToSection("localizacao")}
