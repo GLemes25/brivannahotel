@@ -12,7 +12,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./components/SEO";
 import SkipToContent from "./components/SkipToContent";
 import Testimonials from "./components/Testimonials";
-import TrustBadges from "./components/TrustBadges";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
@@ -25,11 +24,11 @@ export default function Home() {
         <Header />
         <main id="main-content">
           <Hero />
-          <TrustBadges />
+          <About />
+
           <Features />
           <Rooms />
           <Testimonials />
-          <About />
           <Location />
           <FinalCTA />
           <Contact />

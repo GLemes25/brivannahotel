@@ -98,18 +98,17 @@ export default function Header() {
               >
                 Contato
               </button>
-
               <motion.button
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 20px rgba(184, 150, 10, 0.4)",
+                  boxShadow: "0 0 25px rgba(202, 153, 61, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection("contato")}
-                className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-6 py-2.5 rounded-sm transition-all duration-200 shadow-md hover:brightness-110"
+                className="bg-gradient-to-r from-[#f4d988] via-[#ca993d] to-[#f4d988] text-black px-6 py-2.5 rounded-sm transition-all duration-200 shadow-md hover:brightness-110"
                 style={{ fontSize: "0.9375rem", fontWeight: 500 }}
               >
-                Reservar agora
+                Reserve agora
               </motion.button>
             </nav>
 
