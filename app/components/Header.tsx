@@ -106,7 +106,7 @@ export default function Header() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection("contato")}
-                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md"
+                className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-6 py-2.5 rounded-sm transition-all duration-200 shadow-md hover:brightness-110"
                 style={{ fontSize: "0.9375rem", fontWeight: 500 }}
               >
                 Reservar agora
