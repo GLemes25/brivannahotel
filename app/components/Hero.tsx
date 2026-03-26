@@ -38,8 +38,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="leading-tight"
           style={{
-            fontSize: "clamp(2.5rem, 6vw, 4rem)",
-            fontWeight: 500,
+            fontSize: "clamp(3rem, 6vw, 4rem)",
+            fontWeight: 800,
             letterSpacing: "0.05em",
           }}
         >
