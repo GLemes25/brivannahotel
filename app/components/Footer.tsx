@@ -1,6 +1,8 @@
 "use client";
-import { Facebook, Heart, Instagram, Mail, MapPin, Phone } from "lucide-react";
+
+import { Instagram, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,85 +18,51 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-secondary/50 border-t border-primary/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">
-                  H
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span
-                  className="text-foreground tracking-wide"
-                  style={{ fontSize: "1.125rem", fontWeight: 600 }}
-                >
-                  Hotel Brivanna
-                </span>
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.75rem", fontWeight: 300 }}
-                >
-                  Campo Grande
-                </span>
-              </div>
-            </div>
-            <p
-              className="text-muted-foreground leading-relaxed"
-              style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-            >
-              Conforto, praticidade e localização privilegiada para
-              profissionais exigentes.
-            </p>
+    <footer className="bg-[#000f0e] text-white border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Logo + Descrição */}
+          <div className="space-y-5 ">
+            <Image
+              src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774557270/brivanna_white_log_e8hg0l.svg"
+              alt="Hotel Brivanna"
+              width={10}
+              height={10}
+              className="w-20 h-auto ml-5"
+              priority
+            />
 
-            {/* Social Links */}
-            <div className="flex items-center space-x-3 pt-4">
-              <motion.a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group"
-              >
-                <Facebook
-                  size={18}
-                  className="text-primary group-hover:text-primary-foreground transition-colors"
-                />
-              </motion.a>
-              <motion.a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 group"
-              >
-                <Instagram
-                  size={18}
-                  className="text-primary group-hover:text-primary-foreground transition-colors"
-                />
-              </motion.a>
+            <p className="text-white/70 text-md leading-relaxed font-light">
+              Recepção 24 horas
+            </p>
+          </div>
+
+          {/* Contato */}
+          <div>
+            <h4 className="text-lg font-medium mb-6">Fale Conosco</h4>
+
+            <div className="space-y-3 text-sm text-white/70">
+              <div className="flex items-center gap-3">
+                <Phone size={16} className="text-primary" />
+                <span>(67) 3333-4444</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail size={16} className="text-primary" />
+                <span>contato@hotelbrivanna.com.br</span>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Links */}
           <div>
-            <h4
-              className="text-foreground mb-4"
-              style={{ fontSize: "1.0625rem", fontWeight: 600 }}
-            >
-              Links Rápidos
-            </h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-medium mb-6">Links</h4>
+
+            <ul className="space-y-3 text-sm text-white/70">
               <li>
                 <button
                   onClick={() => scrollToSection("inicio")}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
+                  className="hover:text-primary transition"
                 >
                   Início
                 </button>
@@ -102,8 +70,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("quartos")}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
+                  className="hover:text-primary transition"
                 >
                   Quartos
                 </button>
@@ -111,26 +78,15 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("sobre")}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
+                  className="hover:text-primary transition"
                 >
                   Sobre
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("localizacao")}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  Localização
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => scrollToSection("contato")}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
+                  className="hover:text-primary transition"
                 >
                   Contato
                 </button>
@@ -138,121 +94,56 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Localização */}
           <div>
-            <h4
-              className="text-foreground mb-4"
-              style={{ fontSize: "1.0625rem", fontWeight: 600 }}
-            >
-              Contato
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <Phone
-                  size={18}
-                  className="text-primary mt-0.5 flex-shrink-0"
-                />
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  (67) 3333-4444
-                </span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Mail size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span
-                  className="text-muted-foreground break-all"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  contato@hotelBrivanna.com.br
-                </span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <MapPin
-                  size={18}
-                  className="text-primary mt-0.5 flex-shrink-0"
-                />
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  Rua Principal, 123
-                  <br />
+            <h4 className="text-lg font-medium mb-6">Localize o Hotel</h4>
+
+            <div className="space-y-4 text-sm text-white/70">
+              <div className="flex items-start gap-3">
+                <MapPin size={16} className="text-primary mt-1" />
+                <span>
+                  Rua Joaquim Nabuco, 50 <br />
                   Centro - Campo Grande, MS
                 </span>
-              </li>
-            </ul>
-          </div>
+              </div>
 
-          {/* Info */}
-          <div>
-            <h4
-              className="text-foreground mb-4"
-              style={{ fontSize: "1.0625rem", fontWeight: 600 }}
-            >
-              Informações
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  Check-in: 14h
-                </span>
-              </li>
-              <li>
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  Check-out: 12h
-                </span>
-              </li>
-              <li>
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  Recepção: 24 horas
-                </span>
-              </li>
-              <li>
-                <span
-                  className="text-muted-foreground"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  Wi-Fi gratuito
-                </span>
-              </li>
-            </ul>
+              {/* Social */}
+              <div className="flex gap-3 pt-2">
+                {[PhoneIcon, Instagram].map((Icon, i) => (
+                  <motion.a
+                    key={i}
+                    href="#"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition"
+                  >
+                    <Icon size={18} className="text-white" />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-primary/20 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <p
-              className="text-muted-foreground text-center md:text-left"
-              style={{ fontSize: "0.875rem", fontWeight: 300 }}
-            >
-              © {currentYear} Hotel Brivanna. Todos os direitos reservados.
-            </p>
-            <p
-              className="text-muted-foreground flex items-center space-x-2"
-              style={{ fontSize: "0.875rem", fontWeight: 300 }}
-            >
-              <span>Feito com</span>
-              <Heart size={14} className="text-accent fill-accent" />
-              <span>em Campo Grande, MS</span>
-            </p>
+        {/* Bottom */}
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+          <p>© {currentYear} Hotel Brivanna — Todos os direitos reservados</p>
+
+          <div className="flex items-center gap-4">
+            <span className="hover:text-white cursor-pointer">
+              Política de Privacidade
+            </span>
+
+            <Image
+              src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468002/brivanna_logo_jftfdq.png"
+              alt="Brivanna"
+              width={90}
+              height={20}
+              className="opacity-80 hover:opacity-100 transition mr-30"
+            />
           </div>
         </div>
       </div>
-
-      {/* Decorative gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-50" />
     </footer>
   );
 }

@@ -25,7 +25,6 @@ export default function Home() {
         <main id="main-content">
           <Hero />
           <About />
-
           <Features />
           <Rooms />
           <Testimonials />
