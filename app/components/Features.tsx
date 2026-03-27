@@ -1,4 +1,5 @@
 "use client";
+
 import { Briefcase, DollarSign, MapPin, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -7,106 +8,107 @@ const features = [
     icon: MapPin,
     title: "Localização Central",
     description:
-      "No coração de Campo Grande, próximo a pontos comerciais e empresariais.",
-    accent: false,
+      "No coração de Campo Grande, com acesso rápido a tudo que importa.",
   },
   {
     icon: Briefcase,
-    title: "Ideal para Trabalho",
-    description:
-      "Ambiente profissional e tranquilo, perfeito para viagens corporativas.",
-    accent: false,
+    title: "Foco no Profissional",
+    description: "Ambiente silencioso e funcional para quem viaja a trabalho.",
   },
   {
     icon: DollarSign,
-    title: "Excelente Custo-Benefício",
-    description: "Tarifas competitivas sem comprometer qualidade e conforto.",
-    accent: false,
+    title: "Custo Inteligente",
+    description: "Conforto essencial com tarifas que fazem sentido.",
   },
   {
     icon: Sparkles,
-    title: "Em Modernização",
-    description:
-      "Constante melhoria para oferecer sempre a melhor experiência.",
-    accent: true,
+    title: "Sempre Evoluindo",
+    description: "Melhorias constantes para sua experiência.",
   },
 ];
 
 export default function Features() {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/20">
+    <section className="py-24 bg-green-900/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2
-            className="mb-4"
-            style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 600 }}
+        <div className="grid lg:grid-cols-5 gap-12 items-center">
+          {/* LEFT - 3/5 */}
+          <motion.div
+            className="lg:col-span-3"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <span className="text-foreground">Por que escolher o </span>
-            <span className="text-primary">Hotel Brivanna ?</span>
-          </h2>
-          <p
-            className="text-muted-foreground max-w-2xl mx-auto"
-            style={{ fontSize: "1.0625rem", fontWeight: 300 }}
-          >
-            Combinamos localização privilegiada com infraestrutura pensada para
-            o profissional moderno
-          </p>
-        </motion.div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group"
+            <h2
+              className="mb-6 text-foreground"
+              style={{
+                fontSize: "clamp(4rem, 4vw, 5rem)",
+                fontWeight: 600,
+                lineHeight: 1.2,
+              }}
             >
-              <div className="relative h-full bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-8 hover:border-primary/40 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
-                {/* Icon Container */}
+              Simples, funcional e direto ao ponto.
+            </h2>
+
+            <p
+              className="text-muted-foreground max-w-lg leading-relaxed text-base "
+              style={{
+                fontSize: "clamp(1rem, 4vw, 1.2rem)",
+                fontWeight: 300,
+                lineHeight: 1.2,
+              }}
+            >
+              Um espaço pensado para quem valoriza praticidade. Boa localização,
+              conforto essencial e um ambiente tranquilo para manter o foco ou
+              simplesmente descansar.
+            </p>
+
+            <div className="mt-8 w-8 h-[2px] bg-primary/60" />
+          </motion.div>
+
+          {/* RIGHT - 2/5 */}
+          <div className="lg:col-span-2 grid gap-3">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.05,
+                }}
+                whileHover={{ y: -4 }}
+                className="group"
+              >
                 <div
-                  className={`w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${
-                    feature.accent
-                      ? "bg-gradient-to-br from-accent to-primary group-hover:shadow-lg group-hover:shadow-accent/30"
-                      : "bg-gradient-to-br from-primary to-primary/70 group-hover:shadow-lg group-hover:shadow-primary/30"
-                  }`}
+                  className="p-3 border border-neutral-200  backdrop-blur-sm
+                                transition-all duration-300
+                                hover:bg-primary hover:bg-green-800/50 hover:border-primary hover:shadow-sm"
                 >
-                  <feature.icon className="text-primary-foreground" size={26} />
-                </div>
-
-                {/* Content */}
-                <h3
-                  className="text-foreground mb-3"
-                  style={{ fontSize: "1.25rem", fontWeight: 500 }}
-                >
-                  {feature.title}
-                </h3>
-                <p
-                  className="text-muted-foreground leading-relaxed"
-                  style={{ fontSize: "0.9375rem", fontWeight: 300 }}
-                >
-                  {feature.description}
-                </p>
-
-                {/* Accent indicator */}
-                {feature.accent && (
-                  <div className="absolute top-4 right-4">
-                    <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                  {/* header (icon + title inline) */}
+                  <div className="flex items-center gap-2 mb-1">
+                    <feature.icon
+                      size={16}
+                      className="text-primary transition-colors duration-300 group-hover:text-white"
+                    />
+                    <h3 className="text-sm font-medium text-foreground transition-colors duration-300 group-hover:text-white">
+                      {feature.title}
+                    </h3>
                   </div>
-                )}
-              </div>
-            </motion.div>
-          ))}
+
+                  {/* description */}
+                  <p
+                    className="text-xs text-muted-foreground leading-relaxed pl-[22px]
+                                transition-colors duration-300 group-hover:text-white/80"
+                  >
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
