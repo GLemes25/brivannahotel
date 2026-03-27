@@ -139,7 +139,7 @@ export default function Footer() {
               alt="Brivanna"
               width={90}
               height={20}
-              className="opacity-80 hover:opacity-100 transition mr-30"
+              className="w-[90px] h-auto opacity-80 hover:opacity-100 transition mr-[30px]"
             />
           </div>
         </div>

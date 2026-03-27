@@ -48,7 +48,7 @@ export default function PageLoader() {
                 alt="Brivanna Hotel Logo"
                 width={200}
                 height={30}
-                className="w-50 h-auto"
+                className="w-48 h-auto"
                 priority
               />
             </motion.h2>

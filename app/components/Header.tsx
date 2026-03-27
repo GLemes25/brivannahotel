@@ -57,6 +57,7 @@ export default function Header() {
                 alt="Brivanna Hotel Logo"
                 width={260}
                 height={60}
+                className="h-auto w-[200px]"
                 priority
               />
             </motion.div>
@@ -170,7 +171,7 @@ export default function Header() {
 
             <button
               onClick={() => scrollToSection("contato")}
-              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg mt-4 shadow-md"
+              className="bg-primary text-primary-foreground px-6 rounded-lg mt-4 shadow-md"
               style={{ fontSize: "1rem", fontWeight: 500 }}
             >
               Reservar agora
