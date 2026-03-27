@@ -32,11 +32,11 @@ export default function Rooms() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="mb-4 text-foreground text-[clamp(2rem,4vw,2.75rem)] font-semibold">
+          <h2 className="mb-4 text-foreground text-[clamp(4rem,4vw,2.75rem)] font-semibold">
             Nossos <span className="text-primary">Quartos</span>
           </h2>
 
-          <p className="text-muted-foreground max-w-2xl mx-auto text-[1.0625rem] font-light">
+          <p className="text-muted-foreground max-w-3xl mx-auto text-[1.4rem] font-light">
             Escolha a acomodação que melhor se adapta às suas necessidades
           </p>
         </motion.div>
@@ -61,7 +61,7 @@ export default function Rooms() {
                 </div>
               )}
 
-              <div className="h-full bg-card/40 backdrop-blur-sm border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10">
+              <div className="h-full bg-card/40 backdrop-blur-sm border border-yellow-700 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10">
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <motion.div
@@ -72,7 +72,7 @@ export default function Rooms() {
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
 
                   {/* Capacity */}
-                  <div className="absolute top-4 right-4 bg-green-900 backdrop-blur-sm border border-primary/30 rounded-lg px-3 py-1.5 flex items-center gap-2">
+                  <div className="absolute top-4 right-4 bg-green-900 backdrop-blur-sm border border-black rounded-lg px-3 py-1.5 flex items-center gap-2">
                     <Users size={16} className="text-primary" />
                     <span className="text-foreground text-sm">
                       {room.capacity}
@@ -82,7 +82,7 @@ export default function Rooms() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-foreground mb-3 text-[1.375rem] font-medium">
+                  <h3 className="text-foreground text-center mb-3 text-[1.6rem] font-semibold pb-2">
                     {room.name}
                   </h3>
 
@@ -91,7 +91,7 @@ export default function Rooms() {
                   </p>
 
                   {/* Amenities */}
-                  <div className="flex items-center gap-4 mb-5 pb-5 border-b border-primary/20">
+                  <div className="flex items-center gap-4 mb-5 pb-5 border-b border-yellow-800">
                     {room.amenities.map((key, idx) => {
                       const amenity = amenityMap[key];
                       if (!amenity) return null;
@@ -130,7 +130,12 @@ export default function Rooms() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={scrollToContact}
-                      className="bg-primary/10 text-primary border border-primary/30 px-5 py-2.5 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"
+                      className="
+                            bg-white/70 text-black border border-black/30 px-5 py-2.5 rounded-lg
+                            transition-all duration-300 text-sm font-semibold
+                            hover:bg-gradient-to-r hover:from-[#f4d988] hover:via-[#ca993d] hover:to-[#f4d988]
+                             hover:text-black hover:brightness-110
+                          "
                     >
                       Consultar
                     </motion.button>

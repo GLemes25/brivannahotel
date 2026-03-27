@@ -83,8 +83,7 @@ export default function Features() {
                 className="group"
               >
                 <div
-                  className="p-3 border border-neutral-200  backdrop-blur-sm
-                                transition-all duration-300
+                  className="p-3 border border-neutral-200 backdrop-blur-sm transition-all duration-300 rounded-sm
                                 hover:bg-primary hover:bg-green-800/50 hover:border-primary hover:shadow-sm"
                 >
                   {/* header (icon + title inline) */}
