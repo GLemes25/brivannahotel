@@ -55,7 +55,7 @@ export default function Rooms() {
               {/* Badge */}
               {room.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <div className="bg-green-900 text-foreground px-4 py-1 rounded-full shadow-lg text-xs font-medium">
+                  <div className="bg-gradient-to-r from-[#f4d988] via-[#ca993d] to-[#f4d988] text-black px-4 py-1 rounded-full shadow-lg text-xs font-medium">
                     Mais Popular
                   </div>
                 </div>

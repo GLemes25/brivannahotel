@@ -5,23 +5,24 @@
     "image": "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468006/Quarto-Individual_xigs0n.png",
     "capacity": "1 pessoa",
     "priceRange": "A partir de R$ 120",
-    "featured": false,
+    "featured": true,
+
     "amenities": ["wifi", "ac", "coffee"]
   },
   {
     "name": "Quarto Duplo",
-    "description": "Espaçoso com duas camas solteiros, ideal para casais ou mais conforto.",
+    "description": "Espaçoso com duas camas solteiros.",
     "image": "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468005/Quarto-Duplo-1024x459_cukoiv.png",
     "capacity": "2 pessoas",
     "priceRange": "A partir de R$ 150",
-    "featured": true,
+    "featured": false,
     "amenities": ["wifi", "ac", "coffee"]
   },
   {
     "name": "Quarto Triplo",
-    "description": "Máximo conforto com acabamentos superiores e mais espaço.",
+    "description": "Quarto planejado para Familias, com cama de casal",
     "image": "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468011/Quarto-Triplo-Casal_1_hm4vdo.png",
-    "capacity": "2 pessoas",
+    "capacity": "3 pessoas",
     "priceRange": "A partir de R$ 190",
     "featured": false,
     "amenities": ["wifi", "ac", "coffee"]
