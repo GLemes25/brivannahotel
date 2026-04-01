@@ -29,8 +29,8 @@ export default function Home() {
           <Features />
           <Rooms />
           <Breakfast />
-          <Testimonials />
           <Location />
+          <Testimonials />
           <FinalCTA />
           <Contact />
         </main>
