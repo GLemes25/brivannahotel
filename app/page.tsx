@@ -1,5 +1,4 @@
 import About from "./components/About";
-import Breakfast from "./components/breakfast";
 import Contact from "./components/Contact";
 import Features from "./components/Features";
 import FinalCTA from "./components/FinalCTA";
@@ -28,7 +27,7 @@ export default function Home() {
           <About />
           <Features />
           <Rooms />
-          <Breakfast />
+          {/* <Breakfast /> */}
           <Location />
           <Testimonials />
           <FinalCTA />
