@@ -10,15 +10,19 @@ const EMBED_URL = "https://www.google.com/maps?q=brivanna+hotel&output=embed";
 
 export default function Location() {
   return (
-    <section id="localizacao" className="bg-white">
+    <section
+      id="localizacao"
+      className="bg-white/85
+    reboot"
+    >
       {/* HEADER (continua com container normal) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-7">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-3"
+          className="text-center mb-1"
         >
           <h2
             style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 600 }}

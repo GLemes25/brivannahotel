@@ -79,7 +79,7 @@ export default function About() {
                 className="text-muted-foreground leading-relaxed"
                 style={{ fontSize: "1rem", fontWeight: 300 }}
               >
-                Oferecemos 27 acomodações confortáveis, aliadas a um atendimento
+                Oferecemos acomodações confortáveis, aliadas a um atendimento
                 atencioso e eficiente.
               </p>
 

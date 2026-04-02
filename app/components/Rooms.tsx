@@ -114,30 +114,21 @@ export default function Rooms() {
                       );
                     })}
                   </div>
-
-                  {/* Price */}
                   <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-primary text-lg font-semibold">
-                        {room.priceRange}
-                      </div>
-                      <div className="text-muted-foreground text-xs font-light">
-                        por noite
-                      </div>
-                    </div>
-
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={scrollToContact}
                       className="
-                            bg-white/70 text-black border border-black/30 px-5 py-2.5 rounded-lg
-                            transition-all duration-300 text-sm font-semibold
-                            hover:bg-gradient-to-r hover:from-[#f4d988] hover:via-[#ca993d] hover:to-[#f4d988]
-                             hover:text-black hover:brightness-110
+                        w-full
+                        bg-white/70 text-black border border-yellow-800/30
+                        px-4 py-2 rounded-lg
+                        transition-all duration-300 text-sm font-semibold
+                        hover:bg-gradient-to-r hover:from-[#f4d988] hover:via-[#ca993d] hover:to-[#f4d988]
+                        hover:text-black hover:brightness-110
                           "
                     >
-                      Consultar
+                      Reservar
                     </motion.button>
                   </div>
                 </div>
