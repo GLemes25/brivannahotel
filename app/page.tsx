@@ -5,8 +5,10 @@ import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Indications from "./components/Indications";
 import Location from "./components/Location";
 import PageLoader from "./components/PageLoader";
+import Parking from "./components/Parking";
 import Rooms from "./components/Rooms";
 import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./components/SEO";
@@ -29,6 +31,8 @@ export default function Home() {
           <Rooms />
           {/* <Breakfast /> */}
           <Location />
+          <Parking />
+          <Indications />
           <Testimonials />
           <FinalCTA />
           <Contact />

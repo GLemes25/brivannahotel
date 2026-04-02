@@ -9,7 +9,7 @@ const nearbyPlaces = [
   { icon: Briefcase, name: "Zona Comercial", distance: "3 min" },
 ];
 
-export default function Indication() {
+export default function Indications() {
   return (
     <section id="indications" className="py-12  bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
