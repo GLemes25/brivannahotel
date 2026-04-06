@@ -2,7 +2,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 
-export default function Parking() {
+const Parking = () => {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -21,9 +21,8 @@ export default function Parking() {
     <section
       ref={ref}
       id="parking"
-      className="relative h-[90vh] overflow-hidden"
+      className="relative h-[95vh] overflow-hidden"
     >
-      {/* IMAGEM */}
       <motion.div style={{ y }} className="absolute inset-[-10%] z-0 scale-90">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -33,10 +32,8 @@ export default function Parking() {
         />
       </motion.div>
 
-      {/* OVERLAY */}
       <div className="absolute inset-0 z-10 bg-black/60 pointer-events-none" />
 
-      {/* CONTEÚDO */}
       <div className="relative z-20 h-full flex items-center justify-center text-center px-6">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -44,7 +41,6 @@ export default function Parking() {
           transition={{ duration: 0.9 }}
           className="flex flex-col items-center max-w-2xl"
         >
-          {/* TÍTULO */}
           <h1
             className="text-white font-light"
             style={{
@@ -55,15 +51,12 @@ export default function Parking() {
             Estacionamento
           </h1>
 
-          {/* SUBTÍTULO */}
           <p className="text-white/70 text-xs tracking-[0.35em] uppercase mt-4">
             conforto, segurança e praticidade desde a chegada
           </p>
 
-          {/* DIVISOR */}
           <div className="w-16 h-px bg-white/30 my-8" />
 
-          {/* DESCRIÇÃO PRINCIPAL */}
           <p className="text-white/80 text-sm leading-relaxed max-w-md">
             Disponibilizamos{" "}
             <span className="text-white">2 estacionamentos privativos</span>,
@@ -71,7 +64,6 @@ export default function Parking() {
             durante toda a sua estadia.
           </p>
 
-          {/* LISTA DE BENEFÍCIOS */}
           <div className="mt-8 grid gap-4 text-white/70 text-sm tracking-wide">
             <p>• segurança 24h</p>
             <p>• vagas para vans</p>
@@ -81,4 +73,6 @@ export default function Parking() {
       </div>
     </section>
   );
-}
+};
+
+export default Parking;

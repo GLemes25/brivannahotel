@@ -1,0 +1,50 @@
+[
+  {
+    "user": "Ricardo Silva",
+    "location": "São Paulo, Brasil",
+    "room": "Quarto Executivo",
+    "nights": 3,
+    "guests": 1,
+    "rating": 9.2,
+    "title": "Excelente experiência para negócios",
+    "positive": "Localização estratégica, estacionamento seguro e equipe extremamente profissional.",
+    "negative": "Wi-Fi poderia ser um pouco mais rápido em horários de pico.",
+    "date": "Março de 2026"
+  },
+  {
+    "user": "Ana Costa",
+    "location": "Curitiba, Brasil",
+    "room": "Suíte Premium",
+    "nights": 2,
+    "guests": 2,
+    "rating": 9.5,
+    "title": "Conforto e sofisticação",
+    "positive": "Ambiente muito bem cuidado, silencioso e com excelente atendimento.",
+    "negative": "Café da manhã poderia ter mais variedade.",
+    "date": "Fevereiro de 2026"
+  },
+  {
+    "user": "Paulo Mendes",
+    "location": "Rio de Janeiro, Brasil",
+    "room": "Quarto Standard",
+    "nights": 1,
+    "guests": 1,
+    "rating": 8.8,
+    "title": "Ótima opção para viagens rápidas",
+    "positive": "Check-in rápido, boa estrutura e estacionamento amplo.",
+    "negative": "Tempo de resposta do suporte poderia ser menor.",
+    "date": "Janeiro de 2026"
+  },
+  {
+    "user": "Juliana Rocha",
+    "location": "Belo Horizonte, Brasil",
+    "room": "Suíte Deluxe",
+    "nights": 4,
+    "guests": 2,
+    "rating": 9.0,
+    "title": "Estadia muito confortável",
+    "positive": "Quarto espaçoso, cama excelente e ambiente muito tranquilo.",
+    "negative": "Academia poderia ter mais equipamentos.",
+    "date": "Março de 2026"
+  }
+]

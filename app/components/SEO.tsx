@@ -1,20 +1,18 @@
 "use client";
 import { useEffect } from "react";
 
-interface SEOProps {
+type SEOPropsType = {
   title?: string;
   description?: string;
-}
+};
 
-export default function SEO({
+const SEO = ({
   title = "Hotel Brivanna - Campo Grande, MS | Conforto e Localização Privilegiada",
   description = "Hotel no centro de Campo Grande, MS. Ideal para viagens de trabalho. Quartos confortáveis, localização estratégica e excelente custo-benefício. Reserve agora!",
-}: SEOProps) {
+}: SEOPropsType) => {
   useEffect(() => {
-    // Update title
     document.title = title;
 
-    // Update or create meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement("meta");
@@ -23,7 +21,6 @@ export default function SEO({
     }
     metaDescription.setAttribute("content", description);
 
-    // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement("meta");
@@ -35,7 +32,6 @@ export default function SEO({
       "hotel campo grande, hotel centro campo grande, hotel trabalho campo grande, hospedagem campo grande ms, hotel barato campo grande",
     );
 
-    // Add theme color
     let metaTheme = document.querySelector('meta[name="theme-color"]');
     if (!metaTheme) {
       metaTheme = document.createElement("meta");
@@ -46,4 +42,6 @@ export default function SEO({
   }, [title, description]);
 
   return null;
-}
+};
+
+export default SEO;

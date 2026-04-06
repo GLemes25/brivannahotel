@@ -3,8 +3,11 @@ import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
-export default function Header() {
+const MotionButton = motion(Button);
+
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -40,13 +43,12 @@ export default function Header() {
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#011715]/95 backdrop-blur-md shadow-lg ]"
+            ? "bg-[#011715]/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
             <motion.div
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.02 }}
@@ -62,44 +64,48 @@ export default function Header() {
               />
             </motion.div>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <button
+              <Button
+                variant="ghost"
                 onClick={() => scrollToSection("inicio")}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                className="text-foreground hover:text-primary hover:bg-transparent transition-colors duration-200 h-auto px-0 py-0"
                 style={{ fontSize: "0.9375rem", fontWeight: 400 }}
               >
                 Início
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="ghost"
                 onClick={() => scrollToSection("sobre")}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                className="text-foreground hover:text-primary hover:bg-transparent transition-colors duration-200 h-auto px-0 py-0"
                 style={{ fontSize: "0.9375rem", fontWeight: 400 }}
               >
                 Sobre
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="ghost"
                 onClick={() => scrollToSection("quartos")}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                className="text-foreground hover:text-primary hover:bg-transparent transition-colors duration-200 h-auto px-0 py-0"
                 style={{ fontSize: "0.9375rem", fontWeight: 400 }}
               >
                 Quartos
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="ghost"
                 onClick={() => scrollToSection("localizacao")}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                className="text-foreground hover:text-primary hover:bg-transparent transition-colors duration-200 h-auto px-0 py-0"
                 style={{ fontSize: "0.9375rem", fontWeight: 400 }}
               >
                 Localização
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="ghost"
                 onClick={() => scrollToSection("contato")}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                className="text-foreground hover:text-primary hover:bg-transparent transition-colors duration-200 h-auto px-0 py-0"
                 style={{ fontSize: "0.9375rem", fontWeight: 400 }}
               >
                 Contato
-              </button>
-              <motion.button
+              </Button>
+              <MotionButton
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 25px rgba(202, 153, 61, 0.5)",
@@ -110,21 +116,21 @@ export default function Header() {
                 style={{ fontSize: "0.9375rem", fontWeight: 500 }}
               >
                 Reserve agora
-              </motion.button>
+              </MotionButton>
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-foreground hover:text-primary transition-colors"
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden text-foreground hover:text-primary hover:bg-transparent transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            </Button>
           </div>
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -133,52 +139,59 @@ export default function Header() {
           className="fixed top-20 left-0 right-0 z-40 md:hidden bg-[#102c31]/98 backdrop-blur-lg border-b border-primary/20"
         >
           <nav className="flex flex-col px-4 py-6 space-y-4">
-            <button
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection("inicio")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
               style={{ fontSize: "1rem", fontWeight: 400 }}
             >
               Início
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection("quartos")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
               style={{ fontSize: "1rem", fontWeight: 400 }}
             >
               Quartos
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection("sobre")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
               style={{ fontSize: "1rem", fontWeight: 400 }}
             >
               Sobre
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection("localizacao")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
               style={{ fontSize: "1rem", fontWeight: 400 }}
             >
               Localização
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection("contato")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
               style={{ fontSize: "1rem", fontWeight: 400 }}
             >
               Contato
-            </button>
+            </Button>
 
-            <button
+            <Button
               onClick={() => scrollToSection("contato")}
               className="bg-primary text-primary-foreground px-6 rounded-lg mt-4 shadow-md"
               style={{ fontSize: "1rem", fontWeight: 500 }}
             >
               Reservar agora
-            </button>
+            </Button>
           </nav>
         </motion.div>
       )}
     </>
   );
-}
+};
+
+export default Header;

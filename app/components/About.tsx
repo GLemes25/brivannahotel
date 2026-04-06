@@ -1,6 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "motion/react";
+import Image from "next/image";
 
 const highlights = [
   "Localização estratégica no centro comercial",
@@ -9,7 +10,7 @@ const highlights = [
   "Tarifas justas e transparentes",
 ];
 
-export default function About() {
+const About = () => {
   return (
     <section
       id="sobre"
@@ -17,7 +18,6 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -25,20 +25,19 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
-              <img
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+              <Image
                 src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774557268/brivannaReception_cx53tp.jpg"
                 alt="Hotel Reception"
-                className="w-full h-[500px] object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
             </div>
 
-            {/* Decorative Element */}
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-3xl -z-10" />
           </motion.div>
 
-          {/* Content Side */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -92,7 +91,6 @@ export default function About() {
               </p>
             </div>
 
-            {/* Highlights */}
             <div className="grid sm:grid-cols-2 gap-4 pt-6">
               {highlights.map((highlight, index) => (
                 <motion.div
@@ -121,4 +119,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+};
+
+export default About;

@@ -25,7 +25,7 @@ const badges = [
   },
 ];
 
-export default function TrustBadges() {
+const TrustBadges = () => {
   return (
     <section className="py-16 bg-secondary/30 border-y border-primary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,4 +63,6 @@ export default function TrustBadges() {
       </div>
     </section>
   );
-}
+};
+
+export default TrustBadges;

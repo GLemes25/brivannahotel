@@ -2,24 +2,9 @@
 import { MapPin } from "lucide-react";
 import { motion } from "motion/react";
 
-export default function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
+const Hero = () => {
   return (
     <section id="inicio" className="relative h-screen overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -30,7 +15,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10" />
       </div>
 
-      {/* Título central premium */}
       <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -50,7 +34,6 @@ export default function Hero() {
         </motion.h1>
       </div>
 
-      {/* Badge no FINAL da tela */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,8 +48,9 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Gradiente inferior */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10" />
     </section>
   );
-}
+};
+
+export default Hero;

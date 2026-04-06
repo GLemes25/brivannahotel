@@ -3,8 +3,8 @@
 import { Clock, Mail, MessageCircle, Phone } from "lucide-react";
 import { motion } from "motion/react";
 
-export default function Contact() {
-  const whatsappNumber = "5567999999999"; // Replace with actual number
+const Contact = () => {
+  const whatsappNumber = "5567999999999";
   const whatsappMessage = encodeURIComponent(
     "Olá! Gostaria de fazer uma reserva no Hotel Brivanna.",
   );
@@ -15,7 +15,6 @@ export default function Contact() {
       className="py-24 bg-gradient-to-b from-background via-secondary/20 to-background"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +39,6 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* WhatsApp CTA - Main Focus */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -48,7 +46,6 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            {/* Main WhatsApp Card */}
             <div className="relative bg-gradient-to-br from-[#25D366]/20 to-accent/20 border-2 border-[#25D366]/40 rounded-2xl p-8 overflow-hidden">
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-[#25D366] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-[#25D366]/30">
@@ -114,13 +111,11 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Decorative circles */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#25D366]/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
             </div>
           </motion.div>
 
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -143,7 +138,6 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Contact Cards */}
             <div className="space-y-4">
               <motion.div
                 whileHover={{ x: 8, transition: { duration: 0.2 } }}
@@ -225,4 +219,6 @@ export default function Contact() {
       </div>
     </section>
   );
-}
+};
+
+export default Contact;

@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Features from "./components/Features";
+import Feadbacks from "./components/Feedbacks";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -13,7 +14,6 @@ import Rooms from "./components/Rooms";
 import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./components/SEO";
 import SkipToContent from "./components/SkipToContent";
-import Testimonials from "./components/Testimonials";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
@@ -31,9 +31,9 @@ export default function Home() {
           <Rooms />
           {/* <Breakfast /> */}
           <Location />
+          <Feadbacks />
           <Parking />
           <Indications />
-          <Testimonials />
           <FinalCTA />
           <Contact />
         </main>

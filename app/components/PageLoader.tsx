@@ -1,10 +1,10 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function PageLoader() {
+const PageLoader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -24,7 +24,6 @@ export default function PageLoader() {
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
         >
-          {/* Background com transparência */}
           <div className="absolute inset-0 z-0">
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -35,7 +34,6 @@ export default function PageLoader() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/75 to-black/80" />
           </div>
 
-          {/* Conteúdo */}
           <div className="relative z-10 flex flex-col items-center justify-center text-center">
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
@@ -57,17 +55,14 @@ export default function PageLoader() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="flex items-center gap-2 px-4 py-1.5 rounded-full 
-              bg-white/10 border border-white/20 backdrop-blur-md m-10"
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md m-10"
             >
               <MapPin className="w-3.5 h-3.5 text-lime-400" />
-
               <span className="text-white/80 text-xs tracking-widest uppercase font-medium">
                 Campo Grande • MS
               </span>
             </motion.div>
 
-            {/* Loading bar */}
             <div className="w-64 h-1 bg-white/20 rounded-full overflow-hidden mx-auto">
               <motion.div
                 initial={{ x: "-100%" }}
@@ -81,4 +76,6 @@ export default function PageLoader() {
       )}
     </AnimatePresence>
   );
-}
+};
+
+export default PageLoader;

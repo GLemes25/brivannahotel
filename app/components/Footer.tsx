@@ -3,9 +3,11 @@
 import { Instagram, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import dayjs from "dayjs";
+import { Button } from "./ui/button";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+const Footer = () => {
+  const currentYear = dayjs().year();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -21,8 +23,7 @@ export default function Footer() {
     <footer className="bg-[#000f0e] text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Logo + Descrição */}
-          <div className="space-y-5 ">
+          <div className="space-y-5">
             <Image
               src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774557270/brivanna_white_log_e8hg0l.svg"
               alt="Hotel Brivanna"
@@ -37,7 +38,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contato */}
           <div>
             <h4 className="text-lg font-medium mb-6">Fale Conosco</h4>
 
@@ -54,47 +54,49 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
           <div>
             <h4 className="text-lg font-medium mb-6">Links</h4>
 
             <ul className="space-y-3 text-sm text-white/70">
               <li>
-                <button
+                <Button
+                  variant="link"
                   onClick={() => scrollToSection("inicio")}
-                  className="hover:text-primary transition"
+                  className="hover:text-primary transition h-auto p-0 text-white/70 text-sm font-normal"
                 >
                   Início
-                </button>
+                </Button>
               </li>
               <li>
-                <button
+                <Button
+                  variant="link"
                   onClick={() => scrollToSection("quartos")}
-                  className="hover:text-primary transition"
+                  className="hover:text-primary transition h-auto p-0 text-white/70 text-sm font-normal"
                 >
                   Quartos
-                </button>
+                </Button>
               </li>
               <li>
-                <button
+                <Button
+                  variant="link"
                   onClick={() => scrollToSection("sobre")}
-                  className="hover:text-primary transition"
+                  className="hover:text-primary transition h-auto p-0 text-white/70 text-sm font-normal"
                 >
                   Sobre
-                </button>
+                </Button>
               </li>
               <li>
-                <button
+                <Button
+                  variant="link"
                   onClick={() => scrollToSection("contato")}
-                  className="hover:text-primary transition"
+                  className="hover:text-primary transition h-auto p-0 text-white/70 text-sm font-normal"
                 >
                   Contato
-                </button>
+                </Button>
               </li>
             </ul>
           </div>
 
-          {/* Localização */}
           <div>
             <h4 className="text-lg font-medium mb-6">Localize o Hotel</h4>
 
@@ -107,7 +109,6 @@ export default function Footer() {
                 </span>
               </div>
 
-              {/* Social */}
               <div className="flex gap-3 pt-2">
                 {[PhoneIcon, Instagram].map((Icon, i) => (
                   <motion.a
@@ -125,7 +126,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>© {currentYear} Hotel Brivanna — Todos os direitos reservados</p>
 
@@ -146,4 +146,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

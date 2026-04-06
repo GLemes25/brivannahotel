@@ -9,14 +9,12 @@ const nearbyPlaces = [
   { icon: Briefcase, name: "Zona Comercial", distance: "3 min" },
 ];
 
-export default function Indications() {
+const Indications = () => {
   return (
-    <section id="indications" className="py-12  bg-background">
+    <section id="indications" className="py-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* CONTEÚDO ABAIXO */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-1 gap-12"></div>
-          {/* Nearby Places */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -84,7 +82,6 @@ export default function Indications() {
               ))}
             </div>
 
-            {/* Additional Info Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -109,4 +106,6 @@ export default function Indications() {
       </div>
     </section>
   );
-}
+};
+
+export default Indications;

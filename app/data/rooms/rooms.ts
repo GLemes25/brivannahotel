@@ -1,7 +1,7 @@
 // src/data/rooms.ts
 import { AmenityKey } from "./amenities";
 
-export interface Room {
+export type Room = {
   name: string;
   description: string;
   image: string;
@@ -9,4 +9,4 @@ export interface Room {
   priceRange: string;
   featured?: boolean;
   amenities: AmenityKey[];
-}
+};

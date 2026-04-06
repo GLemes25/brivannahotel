@@ -1,5 +1,6 @@
 "use client";
-export default function SkipToContent() {
+
+const SkipToContent = () => {
   return (
     <a
       href="#main-content"
@@ -9,4 +10,6 @@ export default function SkipToContent() {
       Pular para o conteúdo principal
     </a>
   );
-}
+};
+
+export default SkipToContent;

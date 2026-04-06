@@ -2,8 +2,11 @@
 import { ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
-export default function ScrollToTop() {
+const MotionButton = motion(Button);
+
+const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -29,7 +32,7 @@ export default function ScrollToTop() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
+        <MotionButton
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
@@ -43,8 +46,10 @@ export default function ScrollToTop() {
           aria-label="Voltar ao topo"
         >
           <ChevronUp size={28} />
-        </motion.button>
+        </MotionButton>
       )}
     </AnimatePresence>
   );
-}
+};
+
+export default ScrollToTop;

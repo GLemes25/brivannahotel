@@ -2,7 +2,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 
-export default function Breakfast() {
+const Breakfast = () => {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -23,7 +23,6 @@ export default function Breakfast() {
       id="inicio"
       className="relative h-[120vh] overflow-hidden"
     >
-      {/* IMAGEM */}
       <motion.div style={{ y }} className="absolute inset-[-10%] z-0 scale-125">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -33,10 +32,8 @@ export default function Breakfast() {
         />
       </motion.div>
 
-      {/* OVERLAY */}
       <div className="absolute inset-0 z-10 bg-black/60 pointer-events-none" />
 
-      {/* CONTEÚDO CENTRAL */}
       <div className="relative z-20 h-full flex items-center justify-center text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -44,7 +41,6 @@ export default function Breakfast() {
           transition={{ duration: 1 }}
           className="flex flex-col items-center gap-6"
         >
-          {/* título */}
           <h1
             className="text-white font-light"
             style={{
@@ -55,12 +51,10 @@ export default function Breakfast() {
             Café da manhã
           </h1>
 
-          {/* subtítulo opcional */}
           <p className="text-white/70 text-sm tracking-[0.25em] uppercase">
             experiência matinal refinada
           </p>
           <div className="w-12 h-px bg-white/30 my-2" />
-          {/* horário central */}
           <div className="mt-4">
             <p className="text-white/60 text-xs tracking-[0.3em] uppercase">
               diariamente
@@ -73,4 +67,6 @@ export default function Breakfast() {
       </div>
     </section>
   );
-}
+};
+
+export default Breakfast;

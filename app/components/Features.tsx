@@ -27,12 +27,11 @@ const features = [
   },
 ];
 
-export default function Features() {
+const Features = () => {
   return (
     <section className="py-24 bg-green-900/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12 items-center">
-          {/* LEFT - 3/5 */}
           <motion.div
             className="lg:col-span-3"
             initial={{ opacity: 0, x: -30 }}
@@ -52,7 +51,7 @@ export default function Features() {
             </h2>
 
             <p
-              className="text-muted-foreground max-w-lg leading-relaxed text-base "
+              className="text-muted-foreground max-w-lg leading-relaxed text-base"
               style={{
                 fontSize: "clamp(1rem, 4vw, 1.2rem)",
                 fontWeight: 300,
@@ -67,7 +66,6 @@ export default function Features() {
             <div className="mt-8 w-8 h-[2px] bg-primary/60" />
           </motion.div>
 
-          {/* RIGHT - 2/5 */}
           <div className="lg:col-span-2 grid gap-3">
             {features.map((feature, index) => (
               <motion.div
@@ -82,11 +80,7 @@ export default function Features() {
                 whileHover={{ y: -4 }}
                 className="group"
               >
-                <div
-                  className="p-3 border border-neutral-200 backdrop-blur-sm transition-all duration-300 rounded-sm
-                                hover:bg-primary hover:bg-green-800/50 hover:border-primary hover:shadow-sm"
-                >
-                  {/* header (icon + title inline) */}
+                <div className="p-3 border border-neutral-200 backdrop-blur-sm transition-all duration-300 rounded-sm hover:bg-primary hover:bg-green-800/50 hover:border-primary hover:shadow-sm">
                   <div className="flex items-center gap-2 mb-1">
                     <feature.icon
                       size={16}
@@ -97,11 +91,7 @@ export default function Features() {
                     </h3>
                   </div>
 
-                  {/* description */}
-                  <p
-                    className="text-xs text-muted-foreground leading-relaxed pl-[22px]
-                                transition-colors duration-300 group-hover:text-white/80"
-                  >
+                  <p className="text-xs text-muted-foreground leading-relaxed pl-[22px] transition-colors duration-300 group-hover:text-white/80">
                     {feature.description}
                   </p>
                 </div>
@@ -112,4 +102,6 @@ export default function Features() {
       </div>
     </section>
   );
-}
+};
+
+export default Features;

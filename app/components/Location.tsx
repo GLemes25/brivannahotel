@@ -8,14 +8,12 @@ const MAPS_URL =
 
 const EMBED_URL = "https://www.google.com/maps?q=brivanna+hotel&output=embed";
 
-export default function Location() {
+const Location = () => {
   return (
     <section
       id="localizacao"
-      className="bg-white/85
-    reboot"
+      className="bg-white/85 reboot"
     >
-      {/* HEADER (continua com container normal) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +32,6 @@ export default function Location() {
         </motion.div>
       </div>
 
-      {/* 🔥 MAPA FULL WIDTH REAL */}
       <motion.div
         initial={{ opacity: 0, scale: 1.02 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -43,7 +40,6 @@ export default function Location() {
         className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
       >
         <div className="relative w-full h-[60vh] md:h-[60vh] lg:h-[70vh]">
-          {/* MAPA INTERATIVO */}
           <iframe
             src={EMBED_URL}
             loading="lazy"
@@ -51,9 +47,7 @@ export default function Location() {
             className="absolute inset-0 w-full h-full border-0"
           />
 
-          {/* OVERLAY QUE NÃO BLOQUEIA O MAPA */}
           <div className="pointer-events-none absolute inset-0 flex items-end p-6 md:p-10">
-            {/* CARD INTERATIVO */}
             <div className="pointer-events-auto backdrop-blur-md bg-black/60 border border-white/10 rounded-xl p-5 max-w-[330px] shadow-xl">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
@@ -91,4 +85,6 @@ export default function Location() {
       </motion.div>
     </section>
   );
-}
+};
+
+export default Location;

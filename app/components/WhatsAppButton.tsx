@@ -2,8 +2,8 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 
-export default function WhatsAppButton() {
-  const whatsappNumber = "556733828384"; // Replace with actual number
+const WhatsAppButton = () => {
+  const whatsappNumber = "556733828384";
   const whatsappMessage = encodeURIComponent(
     "Olá! Gostaria de fazer uma reserva no Hotel Brivanna.",
   );
@@ -21,16 +21,14 @@ export default function WhatsAppButton() {
       className="hidden md:flex fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] rounded-full shadow-2xl items-center justify-center group hover:shadow-[#25D366]/50 transition-shadow duration-300"
       aria-label="Fale conosco pelo WhatsApp"
     >
-      {/* Imagem do ícone */}
       <Image
-        src="/whatsapp_icon.svg" // caminho dentro de /public
+        src="/whatsapp_icon.svg"
         alt="WhatsApp"
         width={70}
         height={70}
         className="object-contain"
       />
 
-      {/* Pulse animation */}
       <motion.div
         className="absolute inset-0 bg-[#25D366] rounded-full -z-10"
         initial={{ scale: 1, opacity: 0.5 }}
@@ -38,7 +36,6 @@ export default function WhatsAppButton() {
         transition={{ duration: 2, repeat: Infinity }}
       />
 
-      {/* Tooltip */}
       <div
         className="absolute right-full mr-4 bg-[#25D366] text-white px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-lg"
         style={{ fontSize: "0.875rem", fontWeight: 500 }}
@@ -48,4 +45,6 @@ export default function WhatsAppButton() {
       </div>
     </motion.a>
   );
-}
+};
+
+export default WhatsAppButton;
