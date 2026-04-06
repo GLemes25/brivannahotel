@@ -1,5 +1,6 @@
 "use client";
 
+import { Frown, Smile } from "lucide-react";
 import { FeedbacksType } from "../data/feedbacks/feedbacks";
 
 type FeedbackCardPropsType = {
@@ -10,6 +11,9 @@ const getRatingLabel = (score: number) => {
   if (score >= 9) return "Excelente";
   if (score >= 8) return "Muito bom";
   if (score >= 7) return "Bom";
+  if (score >= 5) return "Regular";
+  if (score >= 3) return "Ruim";
+  if (score >= 1) return "Muito Ruim";
   return "Regular";
 };
 
@@ -34,16 +38,22 @@ const FeedbackCard = ({ item }: FeedbackCardPropsType) => {
       </p>
 
       <div className="mb-3">
-        <p className="text-xs font-semibold text-gray-900">
-          👍 Pontos positivos
-        </p>
+        <div className="flex items-center gap-2">
+          <Smile className="w-4 h-4 text-green-500" />
+          <p className="text-xs font-semibold text-gray-900">
+            Pontos positivos
+          </p>
+        </div>
         <p className="text-sm text-gray-700 leading-relaxed">{item.positive}</p>
       </div>
 
       <div className="mb-5">
-        <p className="text-xs font-semibold text-gray-900">
-          👎 Pontos negativos
-        </p>
+        <div className="flex items-center gap-2">
+          <Frown className="w-4 h-4 text-red-500" />
+          <p className="text-xs font-semibold text-gray-900">
+            Pontos negativos
+          </p>
+        </div>
         <p className="text-sm text-gray-700 leading-relaxed">{item.negative}</p>
       </div>
 

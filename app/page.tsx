@@ -2,7 +2,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Features from "./components/Features";
 import Feadbacks from "./components/Feedbacks";
-import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,6 +9,7 @@ import Indications from "./components/Indications";
 import Location from "./components/Location";
 import PageLoader from "./components/PageLoader";
 import Parking from "./components/Parking";
+import HotelRules from "./components/Regulations";
 import Rooms from "./components/Rooms";
 import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./components/SEO";
@@ -29,12 +29,13 @@ export default function Home() {
           <About />
           <Features />
           <Rooms />
+          <HotelRules />
           {/* <Breakfast /> */}
           <Location />
           <Feadbacks />
           <Parking />
           <Indications />
-          <FinalCTA />
+          {/* <FinalCTA /> */}
           <Contact />
         </main>
         <Footer />

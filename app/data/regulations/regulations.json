@@ -1,0 +1,37 @@
+{
+  "regulations": [
+    {
+      "title": "Proibido Fumar",
+      "icon": "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1775509615/dontsmoke_zj4fle.svg",
+      "items": [
+        "É proibido fumar nas dependências do hotel :",
+        "Quartos",
+        "Corredores",
+        "Áreas internas",
+        "Inclui cigarro, vape e narguilé"
+      ],
+      "highlight": "Multa: R$ 150,00",
+      "extra": "Lei Antifumo Nº 9.294, 15 de julho de 1996"
+    },
+    {
+      "title": "Pets",
+      "icon": "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1775509617/catdog_dybzbe.svg",
+      "items": [
+        "Pets sempre supervisionados",
+        "Proibido deixar sozinho no quarto",
+        "Responsabilidade por danos causados"
+      ],
+      "highlight": "Taxa: R$ 50,00 por pet / diária"
+    },
+    {
+      "title": "Crianças e Menores",
+      "icon": "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1775509626/girlzinha_zamujs.svg",
+      "items": [
+        "Crianças até 7 anos não pagam",
+        "Documento obrigatório",
+        "Menores de 18 anos devem comprovar parentesco"
+      ],
+      "highlight": "Proibido: Menores de 14 desacompanhados"
+    }
+  ]
+}

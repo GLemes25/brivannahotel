@@ -10,10 +10,7 @@ const EMBED_URL = "https://www.google.com/maps?q=brivanna+hotel&output=embed";
 
 const Location = () => {
   return (
-    <section
-      id="localizacao"
-      className="bg-white/85 reboot"
-    >
+    <section id="localizacao" className="bg-black reboot">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,9 +22,7 @@ const Location = () => {
           <h2
             style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 600 }}
           >
-            <span className="text-green-950">
-              Localização no Centro da Cidade
-            </span>
+            <span className="text-white">Localização no Centro da Cidade</span>
           </h2>
         </motion.div>
       </div>

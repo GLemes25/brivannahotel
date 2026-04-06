@@ -1,7 +1,7 @@
 "use client";
 
-import { FeedbacksType } from "../data/feedbacks/feedbacks";
 import feedbacksJson from "../data/feedbacks/feadbacks.json";
+import { FeedbacksType } from "../data/feedbacks/feedbacks";
 import InfiniteCarousel from "./infinite-carousel";
 
 const feedbacks: FeedbacksType[] = feedbacksJson as FeedbacksType[];
@@ -15,7 +15,7 @@ const Feedbacks = () => {
             Avaliações dos Hóspedes
           </h2>
           <p className="text-gray-300 text-sm mt-2">
-            Feedbacks reais baseados coletados do booking
+            Feedbacks reais coletados do booking
           </p>
         </div>
 
