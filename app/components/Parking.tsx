@@ -10,61 +10,118 @@ const Parking = () => {
     offset: ["start start", "end start"],
   });
 
-  const yRaw = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-
+  // Parallax MAIS SUAVE (mobile-friendly)
+  const yRaw = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
   const y = useSpring(yRaw, {
-    stiffness: 50,
-    damping: 20,
+    stiffness: 60,
+    damping: 25,
   });
 
   return (
     <section
       ref={ref}
       id="parking"
-      className="relative h-[95vh] overflow-hidden"
+      className="
+        relative 
+        min-h-[100svh] 
+        md:h-[95vh]
+        overflow-hidden
+      "
     >
-      <motion.div style={{ y }} className="absolute inset-[-10%] z-0 scale-90">
+      {/* BACKGROUND */}
+      <motion.div style={{ y }} className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dk7zfhbrj/image/upload/v1775158333/garagembrivanna_tptenr.jpg')`,
+            backgroundImage:
+              "url('https://res.cloudinary.com/dk7zfhbrj/image/upload/v1775158333/garagembrivanna_tptenr.jpg')",
           }}
         />
       </motion.div>
 
-      <div className="absolute inset-0 z-10 bg-black/60 pointer-events-none" />
+      {/* OVERLAY */}
+      <div className="absolute inset-0 z-10 bg-black/70 md:bg-black/60" />
 
-      <div className="relative z-20 h-full flex items-center justify-center text-center px-6">
+      {/* CONTENT */}
+      <div
+        className="
+          relative z-20
+          flex items-center justify-center
+          text-center
+          px-5 sm:px-6
+          py-16 md:py-0
+          min-h-[100svh]
+        "
+      >
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="flex flex-col items-center max-w-2xl"
+          transition={{ duration: 0.8 }}
+          className="
+            flex flex-col items-center
+            max-w-xl md:max-w-2xl
+          "
         >
+          {/* TITLE */}
           <h1
-            className="text-white font-light"
+            className="
+              text-white font-light
+              tracking-[0.12em]
+            "
             style={{
-              fontSize: "clamp(3rem, 6vw, 4rem)",
-              letterSpacing: "0.14em",
+              fontSize: "clamp(2rem, 6vw, 4rem)",
             }}
           >
             Estacionamento
           </h1>
 
-          <p className="text-white/70 text-xs tracking-[0.35em] uppercase mt-4">
+          {/* SUBTITLE */}
+          <p
+            className="
+              text-white/70 uppercase
+              mt-3 md:mt-4
+            "
+            style={{
+              fontSize: "clamp(0.65rem, 2.5vw, 0.75rem)",
+              letterSpacing: "0.3em",
+            }}
+          >
             conforto, segurança e praticidade desde a chegada
           </p>
 
-          <div className="w-16 h-px bg-white/30 my-8" />
+          {/* DIVIDER */}
+          <div className="w-14 md:w-16 h-px bg-white/30 my-6 md:my-8" />
 
-          <p className="text-white/80 text-sm leading-relaxed max-w-md">
+          {/* DESCRIPTION */}
+          <p
+            className="
+              text-white/80
+              leading-relaxed
+              px-2 md:px-0
+            "
+            style={{
+              fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
+            }}
+          >
             Disponibilizamos{" "}
-            <span className="text-white">2 estacionamentos privativos</span>,
-            cuidadosamente planejados para oferecer comodidade e tranquilidade
+            <span className="text-white font-medium">
+              2 estacionamentos privativos
+            </span>
+            , cuidadosamente planejados para oferecer comodidade e tranquilidade
             durante toda a sua estadia.
           </p>
 
-          <div className="mt-8 grid gap-4 text-white/70 text-sm tracking-wide">
+          {/* FEATURES */}
+          <div
+            className="
+              mt-6 md:mt-8
+              grid gap-3 md:gap-4
+              text-white/70
+            "
+            style={{
+              fontSize: "clamp(0.85rem, 3vw, 0.95rem)",
+            }}
+          >
             <p>• segurança 24h</p>
             <p>• vagas para vans</p>
             <p>• espaço para caminhões de pequeno porte</p>

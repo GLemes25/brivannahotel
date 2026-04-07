@@ -17,14 +17,14 @@ export const RuleSection = ({ rule, index }: RuleSectionProps) => (
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.08 }}
     className="
-      group
-      flex flex-col gap-6 py-10
-      sm:flex-row sm:items-start
-      border-b border-white/10
-    "
+    group
+    flex flex-col gap-6 py-5
+    sm:flex-row sm:items-start
+    border-b border-white/10
+  "
   >
-    {/* ICON */}
-    <div className="shrink-0 relative">
+    {/* ICON (desktop) */}
+    <div className="hidden sm:block shrink-0 relative">
       <div className="absolute inset-0 rounded-full bg-red-600/10 blur-xl group-hover:bg-red-600/20 transition" />
       <Image
         src={rule.icon}
@@ -37,10 +37,24 @@ export const RuleSection = ({ rule, index }: RuleSectionProps) => (
 
     {/* CONTENT */}
     <div className="flex flex-col gap-4 flex-1">
-      {/* TITLE */}
+      {/* TITLE + ICON (mobile) */}
       <div className="flex items-center gap-3">
+        {/* ICON mobile */}
+        <div className="sm:hidden relative shrink-0">
+          <div className="absolute inset-0 rounded-full bg-red-600/10 blur-xl" />
+          <Image
+            src={rule.icon}
+            alt={rule.title}
+            width={48}
+            height={48}
+            className="object-contain relative z-10"
+          />
+        </div>
+
+        {/* barra */}
         <div className="h-6 w-[3px] bg-gradient-to-b from-red-600 to-red-800 rounded-full" />
 
+        {/* title */}
         <h3
           className="
           text-2xl md:text-3xl
@@ -52,7 +66,6 @@ export const RuleSection = ({ rule, index }: RuleSectionProps) => (
           {rule.title}
         </h3>
       </div>
-
       {/* HIGHLIGHT */}
       {rule.highlight &&
         (() => {

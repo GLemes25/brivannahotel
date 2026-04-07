@@ -136,57 +136,60 @@ const Header = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed top-20 left-0 right-0 z-40 md:hidden bg-[#102c31]/98 backdrop-blur-lg border-b border-primary/20"
+          className="
+      fixed top-20 left-0 right-0 z-40 md:hidden
+      bg-[#011715]/95 backdrop-blur-md
+      border-b border-white/10
+    "
         >
-          <nav className="flex flex-col px-4 py-6 space-y-4">
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("inicio")}
-              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
-              style={{ fontSize: "1rem", fontWeight: 400 }}
-            >
-              Início
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("quartos")}
-              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
-              style={{ fontSize: "1rem", fontWeight: 400 }}
-            >
-              Quartos
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("sobre")}
-              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
-              style={{ fontSize: "1rem", fontWeight: 400 }}
-            >
-              Sobre
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("localizacao")}
-              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
-              style={{ fontSize: "1rem", fontWeight: 400 }}
-            >
-              Localização
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("contato")}
-              className="text-foreground hover:text-primary hover:bg-transparent transition-colors text-left justify-start py-2 h-auto px-0"
-              style={{ fontSize: "1rem", fontWeight: 400 }}
-            >
-              Contato
-            </Button>
+          <nav className="flex flex-col px-6 py-6 gap-5">
+            {[
+              { label: "Início", id: "inicio" },
+              { label: "Sobre", id: "sobre" },
+              { label: "Quartos", id: "quartos" },
+              { label: "Localização", id: "localizacao" },
+              { label: "Contato", id: "contato" },
+            ].map((item) => (
+              <Button
+                key={item.id}
+                variant="ghost"
+                onClick={() => {
+                  scrollToSection(item.id);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="
+            text-white/90
+            hover:text-[#f4d988]
+            hover:bg-white/5
+            transition-all duration-200
+            text-left justify-start
+            py-3 px-0 h-auto
+          "
+                style={{ fontSize: "1.05rem", fontWeight: 400 }}
+              >
+                {item.label}
+              </Button>
+            ))}
 
-            <Button
-              onClick={() => scrollToSection("contato")}
-              className="bg-primary text-primary-foreground px-6 rounded-lg mt-4 shadow-md"
+            {/* CTA IGUAL DESKTOP */}
+            <MotionButton
+              whileTap={{ scale: 0.97 }}
+              onClick={() => {
+                scrollToSection("contato");
+                setIsMobileMenuOpen(false);
+              }}
+              className="
+          mt-4 w-full
+          bg-gradient-to-r from-[#f4d988] via-[#ca993d] to-[#f4d988]
+          text-black
+          py-3 rounded-md
+          shadow-lg
+          active:scale-[0.98]
+        "
               style={{ fontSize: "1rem", fontWeight: 500 }}
             >
               Reservar agora
-            </Button>
+            </MotionButton>
           </nav>
         </motion.div>
       )}

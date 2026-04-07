@@ -5,11 +5,11 @@ import { RuleSection } from "./RegulationsSection";
 const rules = regulationsData.regulations as RegulationsType[];
 
 const Regulations = () => (
-  <section className="bg-green-900/10 px-6 py-16 text-white">
+  <section className="bg-green-900/10 px-6 py-7 text-white">
     <div className="mx-auto max-w-3xl">
       <h2
         className="
-    mb-14
+    mb-5
     text-center
     text-4xl md:text-5xl lg:text-6xl
     font-extrabold
