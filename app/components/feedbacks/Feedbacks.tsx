@@ -1,7 +1,7 @@
 "use client";
 
-import feedbacksJson from "../data/feedbacks/feadbacks.json";
-import { FeedbacksType } from "../data/feedbacks/feedbacks";
+import feedbacksJson from "../../data/feedbacks/feadbacks.json";
+import { FeedbacksType } from "../../data/feedbacks/feedbacks";
 import InfiniteCarousel from "./infinite-carousel";
 
 const feedbacks: FeedbacksType[] = feedbacksJson as FeedbacksType[];

@@ -1,7 +1,7 @@
 "use client";
 
 import { Frown, Smile } from "lucide-react";
-import { FeedbacksType } from "../data/feedbacks/feedbacks";
+import { FeedbacksType } from "../../data/feedbacks/feedbacks";
 
 type FeedbackCardPropsType = {
   item: FeedbacksType;

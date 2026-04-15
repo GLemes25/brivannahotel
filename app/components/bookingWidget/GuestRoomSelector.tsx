@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Check, Minus, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../ui/utils";
-import CounterButton from "./counter-button";
+import CounterButton from "./CounterButton";
 import type { BookingRoom } from "./types";
 
 type GuestRoomSelectorProps = {

@@ -5,9 +5,9 @@ import dayjs from "dayjs";
 import { Calendar, Search, Ticket, Users } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../ui/utils";
-import DateRangeSelector from "./date-range-selector";
-import DiscountInput from "./discount-input";
-import GuestRoomSelector from "./guest-room-selector";
+import DateRangeSelector from "./DateRangeSelector";
+import DiscountInput from "./DiscountInput";
+import GuestRoomSelector from "./GuestRoomSelector";
 import type { BookingState } from "./types";
 
 const BOOKING_BASE_URL =
@@ -60,7 +60,7 @@ const BookingWidget = () => {
   };
 
   return (
-    <section id="booking-widget" className="bg-green-900/10 py-10 px-4">
+    <section id="booking-widget" className="bg-background2 py-10 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header mais clean */}
         <div className="text-center mb-8">

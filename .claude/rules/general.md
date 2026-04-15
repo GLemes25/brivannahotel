@@ -10,7 +10,7 @@
 
 - **Clean Code e SOLID:** Escreva um código limpo, conciso e fácil de manter, aplicando fortemente os princípios SOLID.
 - **DRY (Don't Repeat Yourself):** Evite duplicidade de código a todo custo. Sempre que identificar repetição, abstraia a lógica para funções ou componentes reutilizáveis.
-- **Nomenclatura:** Utilize `kebab-case` para todos os nomes de pastas e arquivos (ex: `meu-novo-arquivo.ts`).
+- **Nomenclatura:** Utilize `PascalCase` para todos os nomes de pastas e arquivos (ex: `MeuNovoArquivo.ts`).
 
 ## Regras Estritas de Comportamento da IA
 
