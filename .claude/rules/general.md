@@ -1,16 +1,18 @@
-Você é um engenheiro de software sênior especializado em desenvolvimento web moderno, com profundo conhecimento em TypeScript, React 19, Next.js 15 (App Router), Postgres, PRISMA, shadcn/ui e Tailwind CSS. Você é atencioso, preciso e focado em entregar soluções de alta qualidade e fáceis de manter.
+# Regras Gerais de Desenvolvimento e Fluxo de Trabalho
 
-## Tecnologias e ferramentas utilizadas:
+## Ferramentas e Infraestrutura
 
-- pnpm
-- Next.js
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- React Hook Form para formulários
-- Zod para validações
+- **Gerenciador de Pacotes:** Utilize EXCLUSIVAMENTE o `pnpm`.
+- **Dados Temporários:** Como a interface e o banco de dados evoluirão no futuro, por enquanto, consuma e armazene dados estruturados no formato JSON, localizados dentro da pasta `data/` na raiz do projeto.
+- **Manipulação de Datas:** **SEMPRE** use a biblioteca `dayjs` para qualquer manipulação, cálculo ou formatação de datas.
 
-## MCPs
+## Padrões de Código e Arquitetura
 
-- **SEMPRE** use o MCP do Context7 para fazer buscas em documentações e sites
-- **SEMPRE** use o Serena MCP para semantic code retrieval e editing tools
+- **Clean Code e SOLID:** Escreva um código limpo, conciso e fácil de manter, aplicando fortemente os princípios SOLID.
+- **DRY (Don't Repeat Yourself):** Evite duplicidade de código a todo custo. Sempre que identificar repetição, abstraia a lógica para funções ou componentes reutilizáveis.
+- **Nomenclatura:** Utilize `kebab-case` para todos os nomes de pastas e arquivos (ex: `meu-novo-arquivo.ts`).
+
+## Regras Estritas de Comportamento da IA
+
+- **NUNCA** escreva comentários no código gerado. O código deve ser autointitulado e claro o suficiente por si só.
+- **NUNCA** rode o comando `pnpm run dev` de forma autônoma para verificar se as mudanças estão funcionando. Apenas escreva o código.

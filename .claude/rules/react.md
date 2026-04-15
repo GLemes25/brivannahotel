@@ -1,66 +1,24 @@
-## Componentes
+# Regras de React, Next.js e UI
 
-- Use componentes da biblioteca shadcn/ui o máximo possível ao criar/modificar components (veja https://ui.shadcn.com/ para a lista de componentes disponíveis).
-- Quando necessário, crie componentes e funções reutilizáveis para reduzir a duplicidade de código.
-- **NUNCA** crie mais de um componente no mesmo arquivo. Cada componente deve ter seu próprio arquivo.
-- Antes de criar um novo componente, **SEMPRE** use Context7 para verificar se já existe um componente do shadcn/ui que possa ser utilizado. Caso exista, instale-o.
-- **SEMPRE** use o componente `Button` do shadcn/ui (`@/components/ui/button`) para botões. **NUNCA** use `<button>` nativo diretamente.
+## Componentização
 
-## Formulários
+- **Sintaxe:** **SEMPRE** utilize _arrow functions_ para a criação de componentes React.
+- **Isolamento:** **NUNCA** crie mais de um componente no mesmo arquivo. Cada componente deve ter seu próprio arquivo exclusivo.
 
-- SEMPRE use Zod para validação de formulários.
-- Sempre use React Hook Form para criação e validação de formulários. SEMPRE use o componente @components/ui/form.tsx para criar formulários.
+## Sistema de UI (shadcn/ui)
 
-Exemplo de formulário:
+- **Prioridade Máxima:** Use os componentes da biblioteca shadcn/ui o máximo possível para construir a interface. Consulte https://ui.shadcn.com/.
+- **Verificação Prévia:** Antes de criar um novo componente do zero, **SEMPRE** use o _Context7_ (sua ferramenta de contexto) para verificar se já existe um componente correspondente no shadcn/ui. Se existir, instale-o e use-o.
+- **Botões:** **SEMPRE** use o componente `Button` do shadcn/ui (`@/components/ui/button`). **NUNCA** utilize a tag `<button>` nativa do HTML diretamente.
+- **Páginas e Layouts:** **SEMPRE** verifique os componentes base disponíveis em `@components/ui/page.tsx` para garantir a reutilização da estrutura de página.
 
-```tsx
-"use client";
+## Estilização (Tailwind CSS)
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+- **Cores do Tema:** **NUNCA** use cores hard-coded do Tailwind (como `text-white`, `bg-black`, `border-[#f1f1f1]`, `bg-[#2b54ff]`, etc.).
+- **SEMPRE** utilize as variáveis de cor do tema definidas no seu `@app/globals.css` (exemplos: `text-background`, `bg-foreground`, `bg-primary`, `text-primary-foreground`, `border-border`).
+- **Novas Variáveis:** Caso a cor necessária não exista, crie uma nova variável CSS em `@app/globals.css` seguindo o padrão já existente. Porém, antes de criar, **SEMPRE** leia a documentação do shadcn/ui sobre _theming_ para confirmar se é realmente necessário.
 
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+## Formulários e Validação
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-});
-
-export function ProfileForm() {
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input placeholder="shadcn" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
-  );
-}
-```
-
-## Imagens
-
-- **SEMPRE** use o componente `Image` do Next para renderizar imagens.
+- **Stack Obrigatória:** **SEMPRE** construa formulários utilizando `React Hook Form` em conjunto com `Zod` para validação de esquemas.
+- **Componente Base:** **SEMPRE** utilize o componente wrapper `@components/ui/form.tsx` do shadcn para montar e estruturar os campos dos formulários.
