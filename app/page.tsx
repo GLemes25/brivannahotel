@@ -1,4 +1,5 @@
 import About from "./components/About";
+import BookingWidget from "./components/booking-widget/booking-widget";
 import Contact from "./components/Contact";
 import Features from "./components/Features";
 import Feadbacks from "./components/Feedbacks";
@@ -26,6 +27,7 @@ export default function Home() {
         <Header />
         <main id="main-content">
           <Hero />
+          <BookingWidget />
           <About />
           <Features />
           <Rooms />

@@ -111,7 +111,7 @@ const Header = () => {
                   boxShadow: "0 0 25px rgba(202, 153, 61, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection("contato")}
+                onClick={() => scrollToSection("booking-widget")}
                 className="bg-primary text-primary-foreground  hover:brightness-110"
                 style={{ fontSize: "0.9375rem", fontWeight: 500 }}
               >
@@ -175,7 +175,7 @@ const Header = () => {
             <MotionButton
               whileTap={{ scale: 0.97 }}
               onClick={() => {
-                scrollToSection("contato");
+                scrollToSection("booking-widget");
                 setIsMobileMenuOpen(false);
               }}
               className="mt-4 w-full bg-primary text-primary-foreground py-3 rounded-md shadow-lg active:scale-[0.98]"
