@@ -26,12 +26,7 @@ const Hero = () => {
             fontWeight: 800,
             letterSpacing: "0.05em",
           }}
-        >
-          <span className="text-white">Bem-vindo ao </span>
-          <span className="bg-gradient-to-r from-[#f4d988] via-[#ca993d] to-[#f4d988] bg-clip-text text-transparent font-semibold">
-            Hotel Brivanna
-          </span>
-        </motion.h1>
+        ></motion.h1>
       </div>
 
       <motion.div

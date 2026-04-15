@@ -55,7 +55,7 @@ const Header = () => {
               transition={{ duration: 0.2 }}
             >
               <Image
-                src="/brivanna_logo.png"
+                src="/brivanna_logo.svg"
                 alt="Brivanna Hotel Logo"
                 width={260}
                 height={60}
