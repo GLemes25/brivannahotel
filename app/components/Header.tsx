@@ -112,7 +112,7 @@ const Header = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection("contato")}
-                className="bg-gradient-to-r from-[#f4d988] via-[#ca993d] to-[#f4d988] text-black px-6 py-2.5 rounded-sm transition-all duration-200 shadow-md hover:brightness-110"
+                className="bg-primary text-primary-foreground  hover:brightness-110"
                 style={{ fontSize: "0.9375rem", fontWeight: 500 }}
               >
                 Reserve agora
@@ -178,14 +178,7 @@ const Header = () => {
                 scrollToSection("contato");
                 setIsMobileMenuOpen(false);
               }}
-              className="
-          mt-4 w-full
-          bg-gradient-to-r from-[#f4d988] via-[#ca993d] to-[#f4d988]
-          text-black
-          py-3 rounded-md
-          shadow-lg
-          active:scale-[0.98]
-        "
+              className="mt-4 w-full bg-primary text-primary-foreground py-3 rounded-md shadow-lg active:scale-[0.98]"
               style={{ fontSize: "1rem", fontWeight: 500 }}
             >
               Reservar agora
