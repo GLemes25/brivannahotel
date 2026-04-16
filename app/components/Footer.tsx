@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
             <Image
-              src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774557270/brivanna_white_log_e8hg0l.svg"
+              src="/brivanna_white_logo.svg"
               alt="Hotel Brivanna"
               width={120}
               height={40}
@@ -120,7 +120,7 @@ const Footer = () => {
               Política de Privacidade
             </span>
             <Image
-              src="https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468002/brivanna_logo_jftfdq.png"
+              src="/brivanna_logo.svg"
               alt="Brivanna"
               width={80}
               height={18}

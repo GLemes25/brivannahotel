@@ -98,6 +98,8 @@ Interesses Próximos (SEO + UX)
 Footer com contato + redes
 Remoção da página antiga de contato
 
-## Motor de reserva
+Features Adicionar :”PARA EMPRESAS/ PARA TRANSITOR, PROFISSIONAis” com botao para formulario de ser emprsa conveniada para melhores ofertas que vai para outra pagina com formulario
 
-https://reservas.bitzsoftwares.com.br/9968eeee-f170-4705-b665-4939c0b92c73/pt-BR?dataCheckIn=2024-04-28&dataCheckOut=2024-05-30&adultos=2&criancas=2&idadeCriancas=[2,14]&quartos= {"id":1,"adultos":2,"criancas":2,"idadeCriancas":[12,13]](https://reservas.bitzsoftwares.com.br/9968eeee-f170-4705-b665-4939c0b92c73/pt-BR?dataCheckIn=2024-04-28&dataCheckOut=2024-05-30&adultos=2&criancas=2&idadeCriancas=%5B2,14%5D&quartos=%5B%7B%22id%22:1,%22adultos%22:2,%22criancas%22:2,%22idadeCriancas%22:%5B12,13%5D)},{%22id%22:2,%22adultos%22:1,%22criancas%22:0,%22idadeCriancas%22:[]}]&promotionalCode=JK89JX0
+Na parte de indicacoes:interesse proximos vai carergar outra pagina provaveleten passando o id :lavandertias, hamburguerias, restaurantes, pizzariuas, pontos turisticos, supermercados, farmacias, aeroporto
+
++e um pequeno foramulario para cair no email adm

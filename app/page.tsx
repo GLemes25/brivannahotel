@@ -1,7 +1,7 @@
 import About from "./components/About";
+import Agreement from "./components/Agreement";
 import BookingWidget from "./components/bookingWidget/BookingWidget";
 import Contact from "./components/Contact";
-import Features from "./components/Features";
 import Feadbacks from "./components/feedbacks/Feedbacks";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -28,7 +28,7 @@ export default function Home() {
           <Hero />
           <BookingWidget />
           <About />
-          <Features />
+          <Agreement />
           <Rooms />
           <HotelRules />
           {/* <Breakfast /> */}
