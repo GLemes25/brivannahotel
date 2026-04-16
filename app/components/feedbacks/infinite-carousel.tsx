@@ -10,41 +10,56 @@ type InfiniteCarouselPropsType = {
 
 const InfiniteCarousel = ({ items }: InfiniteCarouselPropsType) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollPos = useRef(0);
 
   const duplicated = [...items, ...items];
 
   useEffect(() => {
     let frame: number;
-    let scroll = 0;
-    const speed = 0.4;
+    const speed = 0.5;
 
     const animate = () => {
-      if (!isHovered && ref.current) {
-        scroll += speed;
-        ref.current.scrollLeft = scroll;
+      if (!isPaused && ref.current) {
+        scrollPos.current += speed;
 
-        if (scroll >= ref.current.scrollWidth / 2) {
-          scroll = 0;
+        if (scrollPos.current >= ref.current.scrollWidth / 2) {
+          scrollPos.current = 0;
         }
-      }
 
+        ref.current.scrollLeft = scrollPos.current;
+      }
       frame = requestAnimationFrame(animate);
     };
 
     animate();
     return () => cancelAnimationFrame(frame);
-  }, [isHovered]);
+  }, [isPaused]);
+
+  const handleManualScroll = () => {
+    if (ref.current) {
+      scrollPos.current = ref.current.scrollLeft;
+    }
+  };
 
   return (
     <div
-      className="overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="overflow-hidden w-full relative"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
     >
-      <div ref={ref} className="flex gap-6 overflow-x-scroll no-scrollbar pb-8">
+      <div className="absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+
+      <div
+        ref={ref}
+        onScroll={handleManualScroll}
+        className="flex gap-6 overflow-x-auto pb-8 pt-4 px-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+      >
         {duplicated.map((item, i) => (
-          <FeedbackCard key={i} item={item} />
+          <FeedbackCard key={`${item.user}-${i}`} item={item} />
         ))}
       </div>
     </div>

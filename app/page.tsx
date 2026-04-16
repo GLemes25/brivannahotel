@@ -14,14 +14,13 @@ import HotelRules from "./components/regulations/Regulations";
 import Rooms from "./components/Rooms";
 import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./components/SEO";
-import SkipToContent from "./components/SkipToContent";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
   return (
     <>
       <SEO />
-      <SkipToContent />
+
       <PageLoader />
       <div className="min-h-screen">
         <Header />

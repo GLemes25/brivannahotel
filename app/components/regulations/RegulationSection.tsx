@@ -19,18 +19,17 @@ export const RegulationSection = ({ rule, index }: RuleSectionProps) => (
     className="group flex flex-col gap-6 py-8 sm:flex-row sm:items-start sm:gap-8"
   >
     <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:w-20 shrink-0">
-      <div className="hidden sm:block shrink-0 relative">
-        <div className="absolute inset-0 rounded-full blur-xl  " />
+      <div className="shrink-0 relative">
         <Image
           src={rule.icon}
           alt={rule.title}
-          width={100}
-          height={100}
-          className="object-contain relative z-10"
+          width={80}
+          height={80}
+          className="object-contain"
         />
       </div>
 
-      <h3 className="sm:hidden text-2xl font-serif text-white tracking-wide">
+      <h3 className="text-2xl font-serif text-white tracking-wide sm:hidden">
         {rule.title}
       </h3>
     </div>
@@ -43,18 +42,19 @@ export const RegulationSection = ({ rule, index }: RuleSectionProps) => (
       {rule.highlight &&
         (() => {
           const [title, description] = rule.highlight.split(":");
+
           return (
-            <div className="inline-flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 rounded-lg bg-[#ca993d]/10 border border-[#ca993d]/20 px-4 py-3 mt-1 w-fit">
-              <span className="text-[#ca993d] font-semibold tracking-wide uppercase text-xs">
+            <div className="inline-flex flex-wrap items-baseline gap-2 rounded-lg bg-[#ca993d]/10 border border-[#ca993d]/20 px-4 py-3 mt-1 w-fit">
+              <span className="text-[#ca993d] font-semibold tracking-wide uppercase text-xs whitespace-nowrap">
                 {title}:
               </span>
+
               <span className="text-white/90 text-sm sm:text-base font-medium">
                 {description}
               </span>
             </div>
           );
         })()}
-
       <ul className="flex flex-col gap-3 mt-2">
         {rule.items.map((item) => (
           <RegulationItem key={item} text={item} />
