@@ -2,6 +2,7 @@
 
 :root {
   --background: #ffffff;
+  --background2: #c7c7c7;
   --foreground: #171717;
   --primary: #ca993d;
   --primary-foreground: #ffffff;
@@ -14,6 +15,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background2: var(--background2);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);

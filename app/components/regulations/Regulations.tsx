@@ -5,7 +5,7 @@ import { RegulationSection } from "./RegulationSection";
 const rules = regulationsData.regulations as RegulationsType[];
 
 const Regulations = () => (
-  <section className="bg-green-900/10 px-6 py-24 relative overflow-hidden">
+  <section className="bg-background2 px-6 py-24 relative overflow-hidden">
     {/* Elementos Decorativos de Fundo */}
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-[#ca993d]/30 to-transparent" />
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#ca993d]/5 rounded-full blur-[120px] pointer-events-none" />

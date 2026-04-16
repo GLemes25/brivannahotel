@@ -29,7 +29,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-24 bg-green-900/10">
+    <section className="py-24 bg-background2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <motion.div

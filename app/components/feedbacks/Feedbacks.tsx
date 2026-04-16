@@ -8,7 +8,7 @@ const feedbacks: FeedbacksType[] = feedbacksJson as FeedbacksType[];
 
 const Feedbacks = () => {
   return (
-    <section className="py-15">
+    <section className="py-15 bg-background2">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-14 text-center">
           <h2 className="text-4xl font-light text-white">
