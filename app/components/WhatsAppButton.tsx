@@ -1,16 +1,12 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { whatsappMessage } from "../helpers";
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "556733828384";
-  const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de fazer uma reserva no Hotel Brivanna.",
-  );
-
   return (
     <motion.a
-      href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+      href={whatsappMessage()}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0 }}

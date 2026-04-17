@@ -1,9 +1,11 @@
 "use client";
 
+import brivannaData from "@/app/data/brivanna.json";
 import dayjs from "dayjs";
 import { Instagram, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { whatsappMessage } from "../helpers";
 import { Button } from "./ui/button";
 
 const Footer = () => {
@@ -43,16 +45,16 @@ const Footer = () => {
               Fale Conosco
             </h4>
             <div className="space-y-4 text-sm text-white/70 font-light">
-              <div className="flex items-center gap-3">
+              <a className="flex items-center gap-3" href={whatsappMessage()}>
                 <Phone size={16} className="text-[#ca993d]" />
                 <span className="hover:text-white transition-colors cursor-pointer">
-                  (67) 3333-4444
+                  {brivannaData.phone}
                 </span>
-              </div>
+              </a>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#ca993d]" />
                 <span className="hover:text-white transition-colors cursor-pointer">
-                  contato@hotelbrivanna.com.br
+                  {brivannaData.email}
                 </span>
               </div>
             </div>
@@ -88,10 +90,7 @@ const Footer = () => {
             <div className="space-y-5 text-sm text-white/70 font-light">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#ca993d] shrink-0 mt-0.5" />
-                <span className="leading-relaxed">
-                  Rua Joaquim Nabuco, 50 <br />
-                  Centro - Campo Grande, MS
-                </span>
+                <span className="leading-relaxed">{brivannaData.address}</span>
               </div>
               <div className="flex gap-3 pt-2">
                 {[PhoneIcon, Instagram].map((Icon, i) => (

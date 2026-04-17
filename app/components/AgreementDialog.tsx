@@ -16,6 +16,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/app/components/ui/form";
+
 import { Input } from "@/app/components/ui/input";
 import {
   Select,
@@ -27,11 +28,11 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle, Loader2 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
-/* ---------------- CNPJ VALIDATION ---------------- */
+import { whatsappMessage } from "../helpers";
 
 const validateCNPJ = (cnpj: string) => {
   const cleaned = cnpj.replace(/\D/g, "");
@@ -59,8 +60,6 @@ const validateCNPJ = (cnpj: string) => {
   return cleaned === base + digit1.toString() + digit2.toString();
 };
 
-/* ---------------- SCHEMA ---------------- */
-
 const partnershipSchema = z.object({
   company: z.string().min(2, "Nome da empresa obrigatório"),
 
@@ -80,9 +79,6 @@ type AgreementDialogProps = {
   onOpenChange: (open: boolean) => void;
 };
 
-const WHATSAPP_URL =
-  "https://wa.me/5567999999999?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20conv%C3%AAnio%20empresarial.";
-
 /* ---------------- COMPONENT ---------------- */
 
 const AgreementDialog = ({ open, onOpenChange }: AgreementDialogProps) => {
@@ -98,8 +94,15 @@ const AgreementDialog = ({ open, onOpenChange }: AgreementDialogProps) => {
     },
   });
 
-  const onSubmit = async (_data: PartnershipFormData) => {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+  const onSubmit = async (data: PartnershipFormData) => {
+    // const response = await fetch("/api/send-agreement", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(data),
+    // });
+
+    // if (!response.ok) return;
+
     setIsSuccess(true);
   };
 
@@ -132,8 +135,8 @@ const AgreementDialog = ({ open, onOpenChange }: AgreementDialogProps) => {
               exit={{ opacity: 0 }}
               className="flex flex-col items-center text-center py-6 gap-4"
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                <CheckCircle size={30} className="text-primary" />
+              <div className="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center">
+                <CheckCircle size={30} className="text-green-800" />
               </div>
 
               <h3 className="text-xl font-serif tracking-tight">
@@ -146,9 +149,21 @@ const AgreementDialog = ({ open, onOpenChange }: AgreementDialogProps) => {
 
               <Button
                 asChild
-                className="mt-2 w-full rounded-xl font-semibold uppercase"
+                className="mt-2 w-full rounded-xl font-semibold uppercase bg-green-800 hover:bg-green-600"
               >
-                <a href={WHATSAPP_URL} target="_blank">
+                <a
+                  href={whatsappMessage(
+                    "Olá! Gostaria de falar sobre o convênio empresarial.",
+                  )}
+                  target="_blank"
+                >
+                  <Image
+                    src="/whatsapp_icon2.svg"
+                    alt="WhatsApp"
+                    width={25}
+                    height={25}
+                    className="object-contain"
+                  />
                   Atendimento via WhatsApp
                 </a>
               </Button>

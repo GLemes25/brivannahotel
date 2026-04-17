@@ -98,8 +98,6 @@ Interesses Próximos (SEO + UX)
 Footer com contato + redes
 Remoção da página antiga de contato
 
-Features Adicionar :”PARA EMPRESAS/ PARA TRANSITOR, PROFISSIONAis” com botao para formulario de ser emprsa conveniada para melhores ofertas que vai para outra pagina com formulario
-
 Na parte de indicacoes:interesse proximos vai carergar outra pagina provaveleten passando o id :lavandertias, hamburguerias, restaurantes, pizzariuas, pontos turisticos, supermercados, farmacias, aeroporto
 
 +e um pequeno foramulario para cair no email adm

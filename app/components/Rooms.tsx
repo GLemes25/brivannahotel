@@ -99,7 +99,7 @@ const Rooms = () => {
                 </div>
 
                 {/* CONTEÚDO */}
-                <div className="p-6 md:p-8 flex flex-col flex-1 -mt-6 relative z-10">
+                <div className="p-6 md:p-8 flex flex-col flex-1 lg:-mt-6 relative z-10">
                   <h3 className="text-2xl font-serif text-foreground mb-3 group-hover:text-[#ca993d] transition-colors duration-300">
                     {room.name}
                   </h3>

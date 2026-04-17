@@ -1,7 +1,6 @@
 import About from "./components/About";
 import Agreement from "./components/Agreement";
 import BookingWidget from "./components/bookingWidget/BookingWidget";
-import Contact from "./components/Contact";
 import Feadbacks from "./components/feedbacks/Feedbacks";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -37,7 +36,7 @@ export default function Home() {
           <Parking />
           <Indications />
           {/* <FinalCTA /> */}
-          <Contact />
+          {/* <Contact />  */}
         </main>
         <Footer />
         <ScrollToTop />

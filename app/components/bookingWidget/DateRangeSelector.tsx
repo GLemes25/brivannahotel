@@ -35,9 +35,9 @@ const DateRangeSelector = ({ value, onChange }: DateRangeSelectorProps) => {
           className={cn(
             "w-full rounded-xl border px-4 py-3 text-left transition-all",
             "flex items-center justify-between gap-3",
-            "bg-background hover:bg-green-900",
-            "focus:outline-none focus:ring-2 focus:ring-[#ca993d]/40",
-            isOpen && "ring-2 ring-[#ca993d]/40",
+            "bg-background hover:bg-green-900", // Ajustado para não ser um verde forte no hover do input
+            "focus:outline-none focus:ring-2 focus:ring-primary/40",
+            isOpen && "ring-2 ring-primary/40",
             hasValue ? "border-border" : "border-dashed border-border/70",
           )}
         >
@@ -77,7 +77,8 @@ const DateRangeSelector = ({ value, onChange }: DateRangeSelectorProps) => {
       </PopoverTrigger>
 
       <PopoverContent
-        className="w-auto p-0 bg-background border border-border shadow-2xl rounded-xl overflow-hidden"
+        /* w-[var(--radix-popover-trigger-width)] garante que o calendário tenha a largura do input */
+        className="w-[var(--radix-popover-trigger-width)] min-w-[320px] md:min-w-[600px] max-w-[calc(100vw-2rem)] p-4 bg-background border border-border shadow-2xl rounded-2xl overflow-hidden"
         align="start"
         sideOffset={10}
       >
@@ -95,6 +96,24 @@ const DateRangeSelector = ({ value, onChange }: DateRangeSelectorProps) => {
           disabled={{ before: new Date() }}
           initialFocus
           className="p-3"
+          classNames={{
+            months:
+              "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0 justify-center",
+            month: "space-y-4 w-full",
+            caption: "flex justify-center pt-1 relative items-center ",
+            caption_label: "text-sm font-medium font-serif",
+            head_cell:
+              "text-neutral-500 rounded-md w-9 font-normal text-[0.8rem]",
+            cell: "text-center text-sm p-0 relative focus-within:relative focus-within:z-20",
+            day: "h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-green-900 rounded-md transition-colors",
+            day_range_middle:
+              "aria-selected:bg-primary/60 aria-selected:text-black",
+            day_selected:
+              "bg-primary text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white",
+            day_today: "bg-green-200/20 ",
+            day_outside: "text-neutral-300 opacity-50",
+            day_disabled: "text-neutral-300 opacity-50",
+          }}
         />
       </PopoverContent>
     </Popover>
