@@ -17,15 +17,6 @@ Telefone
 Mensagem
 Integração para envio ao email administrativo\
 
-🏨 2. Página de Quartos (Rooms)
-
-Objetivo: Direcionar conversão para o motor de reservas
-
-Remover ações secundárias (ex: detalhes desnecessários)
-Manter apenas 1 CTA principal:
-Botão: “Reservar”
-Ação do botão:
-Redirecionar diretamente para o motor de reservas externo
 
 📍 4. Página: Interesses Próximos
 
@@ -44,6 +35,7 @@ Pontos turísticos
 Supermercados
 Farmácias
 Aeroporto
+academia
 
 Implementação:
 
@@ -51,15 +43,6 @@ Passar id ou slug na rota
 Exemplo:
 /interesses/restaurantes
 /interesses/farmacias
-
-📌 5. Header (Global)
-
-Objetivo: Maximizar conversão
-
-Adicionar botão fixo:
-“Reservar Agora”
-Sempre visível (sticky/fixed)
-Redireciona para o motor de reservas
 
 📲 7. Contato (Nova abordagem no Footer ou Seção)
 

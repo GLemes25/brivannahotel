@@ -5,7 +5,6 @@ import Feadbacks from "./components/feedbacks/Feedbacks";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Indications from "./components/Indications";
 import Location from "./components/Location";
 import PageLoader from "./components/PageLoader";
 import Parking from "./components/Parking";
@@ -34,7 +33,7 @@ export default function Home() {
           <Location />
           <Feadbacks />
           <Parking />
-          <Indications />
+          {/* <Indications /> */}
           {/* <FinalCTA /> */}
           {/* <Contact />  */}
         </main>
