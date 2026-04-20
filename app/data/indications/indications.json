@@ -6,7 +6,9 @@
     "description": "Serviço expresso de lavagem e passagem com entrega em domicílio disponível.",
     "distance": "300 m",
     "instagramUrl": "https://instagram.com/cleangolavanderia",
-    "mapUrl": "https://maps.google.com/?q=Clean+Go+Lavanderia+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Clean+Go+Lavanderia+Campo+Grande+MS",
+    "businessHours": "Seg a Sáb · 8h às 20h",
+    "isOpenNow": false
   },
   {
     "id": "laundry-002",
@@ -15,7 +17,9 @@
     "description": "Especializada em lavagem a seco para roupas delicadas, sociais e uniformes.",
     "distance": "650 m",
     "instagramUrl": "https://instagram.com/lavanderiaboavista",
-    "mapUrl": "https://maps.google.com/?q=Lavanderia+Boa+Vista+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Lavanderia+Boa+Vista+Campo+Grande+MS",
+    "businessHours": "Seg a Sex · 8h às 18h",
+    "isOpenNow": false
   },
   {
     "id": "burger-001",
@@ -24,7 +28,9 @@
     "description": "Artesanal no capricho, com blend especial de carnes nobres e pão brioche fresquinho.",
     "distance": "400 m",
     "instagramUrl": "https://instagram.com/burguerdapraca",
-    "mapUrl": "https://maps.google.com/?q=Burguer+da+Praca+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Burguer+da+Praca+Campo+Grande+MS",
+    "businessHours": "Ter a Dom · 18h às 23h",
+    "isOpenNow": true
   },
   {
     "id": "burger-002",
@@ -33,7 +39,9 @@
     "description": "Smash burgers crocantes com ingredientes selecionados e molhos autorais imperdíveis.",
     "distance": "800 m",
     "instagramUrl": "https://instagram.com/smashkingscg",
-    "mapUrl": "https://maps.google.com/?q=Smash+Kings+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Smash+Kings+Campo+Grande+MS",
+    "businessHours": "Qua a Dom · 17h às 23h",
+    "isOpenNow": true
   },
   {
     "id": "restaurant-001",
@@ -42,7 +50,9 @@
     "description": "Culinária regional com pratos típicos do Centro-Oeste em um ambiente acolhedor.",
     "distance": "500 m",
     "instagramUrl": "https://instagram.com/sabordocerrado",
-    "mapUrl": "https://maps.google.com/?q=Sabor+do+Cerrado+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Sabor+do+Cerrado+Campo+Grande+MS",
+    "businessHours": "Ter a Dom · 12h às 15h e 19h às 22h",
+    "isOpenNow": false
   },
   {
     "id": "restaurant-002",
@@ -51,7 +61,9 @@
     "description": "Massas artesanais e risotos cremosos com receitas trazidas direto da Itália.",
     "distance": "1.1 km",
     "instagramUrl": "https://instagram.com/donmarcocg",
-    "mapUrl": "https://maps.google.com/?q=Cantina+Don+Marco+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Cantina+Don+Marco+Campo+Grande+MS",
+    "businessHours": "Seg a Sáb · 11h30 às 22h",
+    "isOpenNow": false
   },
   {
     "id": "restaurant-003",
@@ -60,7 +72,9 @@
     "description": "Cortes premium em brasa viva com acompanhamentos gourmet e carta de vinhos.",
     "distance": "900 m",
     "instagramUrl": "https://instagram.com/grill45cg",
-    "mapUrl": "https://maps.google.com/?q=Grill+45+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Grill+45+Campo+Grande+MS",
+    "businessHours": "Ter a Dom · 12h às 15h e 19h às 23h",
+    "isOpenNow": false
   },
   {
     "id": "pizzeria-001",
@@ -69,7 +83,9 @@
     "description": "Pizzas napolitanas assadas em forno a lenha com bordas altas e massa fermentada.",
     "distance": "600 m",
     "instagramUrl": "https://instagram.com/fornodinapolicg",
-    "mapUrl": "https://maps.google.com/?q=Forno+di+Napoli+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Forno+di+Napoli+Campo+Grande+MS",
+    "businessHours": "Ter a Dom · 18h às 23h30",
+    "isOpenNow": false
   },
   {
     "id": "pizzeria-002",
@@ -78,7 +94,9 @@
     "description": "Mais de 40 sabores, massa fina e crocante, com opções individuais e familiares.",
     "distance": "1.2 km",
     "instagramUrl": "https://instagram.com/lastradapizzacg",
-    "mapUrl": "https://maps.google.com/?q=Pizzaria+La+Strada+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Pizzaria+La+Strada+Campo+Grande+MS",
+    "businessHours": "Seg a Dom · 18h às 23h",
+    "isOpenNow": false
   },
   {
     "id": "tourist-001",
@@ -87,7 +105,9 @@
     "description": "O maior parque urbano de Campo Grande, com lago, trilhas e o famoso Museu das Culturas Dom Bosco.",
     "distance": "2.5 km",
     "instagramUrl": "https://instagram.com/parquenacoescg",
-    "mapUrl": "https://maps.google.com/?q=Parque+das+Nacoes+Indigenas+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Parque+das+Nacoes+Indigenas+Campo+Grande+MS",
+    "businessHours": "Ter a Dom · 7h às 19h",
+    "isOpenNow": false
   },
   {
     "id": "tourist-002",
@@ -96,7 +116,9 @@
     "description": "Ícone da cidade com gastronomia local, artesanato e o famoso sorvete de paçoca.",
     "distance": "1.8 km",
     "instagramUrl": "https://instagram.com/mercadaocg",
-    "mapUrl": "https://maps.google.com/?q=Mercadao+Municipal+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Mercadao+Municipal+Campo+Grande+MS",
+    "businessHours": "Seg a Sáb · 7h às 18h",
+    "isOpenNow": false
   },
   {
     "id": "supermarket-001",
@@ -105,7 +127,9 @@
     "description": "Ampla variedade de produtos com padaria, açougue e hortifruti de qualidade.",
     "distance": "700 m",
     "instagramUrl": "https://instagram.com/compersupermercados",
-    "mapUrl": "https://maps.google.com/?q=Comper+Supermercados+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Comper+Supermercados+Campo+Grande+MS",
+    "businessHours": "Seg a Dom · 7h às 22h",
+    "isOpenNow": true
   },
   {
     "id": "supermarket-002",
@@ -114,7 +138,9 @@
     "description": "Preços baixos em grande escala, ideal para compras de abastecimento.",
     "distance": "1.4 km",
     "instagramUrl": "https://instagram.com/atacadaobrasil",
-    "mapUrl": "https://maps.google.com/?q=Atacadao+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Atacadao+Campo+Grande+MS",
+    "businessHours": "Seg a Dom · 8h às 22h",
+    "isOpenNow": true
   },
   {
     "id": "pharmacy-001",
@@ -123,7 +149,9 @@
     "description": "Atendimento 24h com manipulação, dermocosméticos e produtos de saúde em geral.",
     "distance": "250 m",
     "instagramUrl": "https://instagram.com/farmacianissel",
-    "mapUrl": "https://maps.google.com/?q=Farmacia+Nissei+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Farmacia+Nissei+Campo+Grande+MS",
+    "businessHours": "24 horas",
+    "isOpenNow": true
   },
   {
     "id": "pharmacy-002",
@@ -132,7 +160,9 @@
     "description": "Rede nacional com amplo estoque de medicamentos, vacinas e serviços farmacêuticos.",
     "distance": "500 m",
     "instagramUrl": "https://instagram.com/drogaraia",
-    "mapUrl": "https://maps.google.com/?q=Droga+Raia+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Droga+Raia+Campo+Grande+MS",
+    "businessHours": "24 horas",
+    "isOpenNow": true
   },
   {
     "id": "airport-001",
@@ -141,7 +171,9 @@
     "description": "Terminal moderno com voos nacionais para as principais capitais do Brasil.",
     "distance": "7.0 km",
     "instagramUrl": "https://instagram.com/aeroportocg",
-    "mapUrl": "https://maps.google.com/?q=Aeroporto+Internacional+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Aeroporto+Internacional+Campo+Grande+MS",
+    "businessHours": "Todos os dias · 24 horas",
+    "isOpenNow": true
   },
   {
     "id": "airport-002",
@@ -150,7 +182,9 @@
     "description": "Principal terminal de ônibus com linhas para todo o Mato Grosso do Sul e Brasil.",
     "distance": "3.2 km",
     "instagramUrl": "https://instagram.com/rodoviariocg",
-    "mapUrl": "https://maps.google.com/?q=Terminal+Rodoviario+Morenao+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Terminal+Rodoviario+Morenao+Campo+Grande+MS",
+    "businessHours": "Todos os dias · 5h às 23h",
+    "isOpenNow": true
   },
   {
     "id": "gym-001",
@@ -159,7 +193,9 @@
     "description": "Academia completa com equipamentos modernos, aulas coletivas e musculação.",
     "distance": "900 m",
     "instagramUrl": "https://instagram.com/smartfit",
-    "mapUrl": "https://maps.google.com/?q=Smart+Fit+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Smart+Fit+Campo+Grande+MS",
+    "businessHours": "Seg a Sex · 5h às 23h · Sáb e Dom · 8h às 20h",
+    "isOpenNow": true
   },
   {
     "id": "gym-002",
@@ -168,9 +204,10 @@
     "description": "Espaço premium com piscina, spa, squash e personal trainers certificados.",
     "distance": "1.5 km",
     "instagramUrl": "https://instagram.com/bodytechoficial",
-    "mapUrl": "https://maps.google.com/?q=Bodytech+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Bodytech+Campo+Grande+MS",
+    "businessHours": "Seg a Sex · 6h às 22h · Sáb e Dom · 8h às 18h",
+    "isOpenNow": true
   },
-
   {
     "id": "bar-001",
     "name": "Bar do Mané",
@@ -179,7 +216,9 @@
     "distance": "350 m",
     "instagramUrl": "https://instagram.com/bardomane_cg",
     "mapUrl": "https://maps.google.com/?q=Bar+do+Mane+Campo+Grande+MS",
-    "tags": ["Boteco raiz", "Sertanejo"]
+    "tags": ["Boteco raiz", "Sertanejo"],
+    "businessHours": "Qua a Dom · 17h às 01h",
+    "isOpenNow": true
   },
   {
     "id": "bar-002",
@@ -189,6 +228,8 @@
     "distance": "750 m",
     "instagramUrl": "https://instagram.com/rootscraftbar",
     "mapUrl": "https://maps.google.com/?q=Roots+Craft+Bar+Campo+Grande+MS",
-    "tags": ["Rock", "Artesanal"]
+    "tags": ["Rock", "Artesanal"],
+    "businessHours": "Qui a Dom · 18h às 02h",
+    "isOpenNow": true
   }
 ]

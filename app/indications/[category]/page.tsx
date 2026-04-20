@@ -18,6 +18,8 @@ type Indication = {
   instagramUrl: string;
   mapUrl: string;
   tags?: string[];
+  businessHours?: string;
+  isOpenNow?: boolean;
 };
 
 const CategoryPage = () => {
@@ -189,6 +191,41 @@ const CategoryPage = () => {
                         </Badge>
                       </div>
                     </div>
+
+                    {(place.isOpenNow !== undefined || place.businessHours) && (
+                      <div className="flex items-center gap-2 mb-5 mt-1">
+                        {place.isOpenNow !== undefined && (
+                          <>
+                            <div
+                              className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                                place.isOpenNow
+                                  ? "bg-emerald-500/80"
+                                  : "bg-rose-500/50"
+                              }`}
+                            />
+                            <span
+                              className={`text-xs font-light tracking-wide ${
+                                place.isOpenNow
+                                  ? "text-white/70"
+                                  : "text-rose-300/50"
+                              }`}
+                            >
+                              {place.isOpenNow ? "Aberto agora" : "Fechado"}
+                            </span>
+                          </>
+                        )}
+                        {place.businessHours && (
+                          <>
+                            <span className="text-white/20 text-xs select-none">
+                              •
+                            </span>
+                            <span className="text-xs text-muted-foreground font-light tracking-wide">
+                              {place.businessHours}
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    )}
 
                     <div className="w-16 h-[1px] bg-gradient-to-r from-[#ca993d] to-transparent mb-8" />
 
