@@ -170,6 +170,7 @@
     "instagramUrl": "https://instagram.com/bodytechoficial",
     "mapUrl": "https://maps.google.com/?q=Bodytech+Campo+Grande+MS"
   },
+
   {
     "id": "bar-001",
     "name": "Bar do Mané",
@@ -177,7 +178,8 @@
     "description": "O boteco mais querido da região, com chopp gelado e tira-gostos caprichados.",
     "distance": "350 m",
     "instagramUrl": "https://instagram.com/bardomane_cg",
-    "mapUrl": "https://maps.google.com/?q=Bar+do+Mane+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Bar+do+Mane+Campo+Grande+MS",
+    "tags": ["Boteco raiz", "Sertanejo"]
   },
   {
     "id": "bar-002",
@@ -186,6 +188,7 @@
     "description": "Cervejas artesanais locais, cocktails exclusivos e música ao vivo nos finais de semana.",
     "distance": "750 m",
     "instagramUrl": "https://instagram.com/rootscraftbar",
-    "mapUrl": "https://maps.google.com/?q=Roots+Craft+Bar+Campo+Grande+MS"
+    "mapUrl": "https://maps.google.com/?q=Roots+Craft+Bar+Campo+Grande+MS",
+    "tags": ["Rock", "Artesanal"]
   }
 ]
