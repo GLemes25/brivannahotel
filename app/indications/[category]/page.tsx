@@ -1,8 +1,8 @@
 "use client";
 
+import BusinessStatusIndicator from "@/app/components/BusinessStatusIndicator";
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
-import BusinessStatusIndicator from "@/app/components/BusinessStatusIndicator";
 import { CATEGORIES } from "@/app/data/indications/categories";
 import indicationsData from "@/app/data/indications/indications.json";
 import { ArrowLeft, ExternalLink, Navigation } from "lucide-react";
@@ -12,7 +12,9 @@ import { useMemo, useState } from "react";
 
 type TimeSlot = { open: string; close: string };
 type DaySchedule = TimeSlot | TimeSlot[];
-type Schedule = { is24h?: boolean } & { [key: string]: DaySchedule | boolean | undefined };
+type Schedule = { is24h?: boolean } & {
+  [key: string]: DaySchedule | boolean | undefined;
+};
 
 type Indication = {
   id: string;
@@ -163,6 +165,7 @@ const CategoryPage = () => {
           ) : (
             filteredPlaces.map((place, index) => {
               const numberString = String(index + 1).padStart(2, "0");
+              const isDescriptionLink = /^https?:\/\//i.test(place.description);
 
               return (
                 <motion.div
@@ -206,9 +209,22 @@ const CategoryPage = () => {
 
                     <div className="w-16 h-[1px] bg-gradient-to-r from-[#ca993d] to-transparent mb-8" />
 
-                    <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed mb-10 md:max-w-[85%]">
-                      {place.description}
-                    </p>
+                    <div className="mb-10 md:max-w-[85%]">
+                      {isDescriptionLink ? (
+                        <a
+                          href={place.description}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#ca993d] text-base md:text-lg font-light leading-relaxed hover:text-[#f4d988] transition-colors underline underline-offset-4 decoration-[#ca993d]/30 hover:decoration-[#ca993d] break-all"
+                        >
+                          {place.description}
+                        </a>
+                      ) : (
+                        <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
+                          {place.description}
+                        </p>
+                      )}
+                    </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 sm:max-w-md">
                       <Button
