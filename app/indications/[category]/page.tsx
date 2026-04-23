@@ -5,7 +5,7 @@ import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
 import { CATEGORIES } from "@/app/data/indications/categories";
 import indicationsData from "@/app/data/indications/indications.json";
-import { ArrowLeft, ExternalLink, Navigation } from "lucide-react";
+import { ArrowLeft, ExternalLink, Link, Navigation } from "lucide-react";
 import { motion } from "motion/react";
 import { useParams, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
@@ -167,6 +167,12 @@ const CategoryPage = () => {
               const numberString = String(index + 1).padStart(2, "0");
               const isDescriptionLink = /^https?:\/\//i.test(place.description);
 
+              const displayDescription = isDescriptionLink
+                ? place.description
+                    .replace(/^https?:\/\//i, "")
+                    .replace(/\/$/, "")
+                : place.description;
+
               return (
                 <motion.div
                   key={place.id}
@@ -209,18 +215,24 @@ const CategoryPage = () => {
 
                     <div className="w-16 h-[1px] bg-gradient-to-r from-[#ca993d] to-transparent mb-8" />
 
-                    <div className="mb-10 md:max-w-[85%]">
+                    <div className="mb-10 w-full overflow-hidden">
                       {isDescriptionLink ? (
                         <a
                           href={place.description}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#ca993d] text-base md:text-lg font-light leading-relaxed hover:text-[#f4d988] transition-colors underline underline-offset-4 decoration-[#ca993d]/30 hover:decoration-[#ca993d] break-all"
+                          className="text-[#ca993d] flex gap-3  text-base md:text-lg font-light leading-relaxed hover:text-[#f4d988] transition-colors underline underline-offset-4 decoration-[#ca993d]/30 hover:decoration-[#ca993d] break-all"
                         >
-                          {place.description}
+                          <Link
+                            size={18}
+                            className="shrink-0 text-base group-hover/link:text-[#ca993d] transition-colors"
+                          />
+                          <span className="truncate text-sm md:text-base font-light tracking-wide">
+                            {displayDescription}
+                          </span>
                         </a>
                       ) : (
-                        <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
+                        <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed md:max-w-[85%]">
                           {place.description}
                         </p>
                       )}
