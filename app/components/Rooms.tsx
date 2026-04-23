@@ -26,7 +26,7 @@ const Rooms = () => {
 
   return (
     <section
-      id="quartos"
+      id="rooms"
       className="py-12 bg-background relative overflow-hidden"
     >
       {/* Elemento Decorativo de Fundo (opcional para dar um glow sutil) */}

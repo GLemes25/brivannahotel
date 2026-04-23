@@ -1,14 +1,17 @@
 "use client";
 
-import feedbacksJson from "../../data/feedbacks/feadbacks.json";
 import { FeedbacksType } from "../../data/feedbacks/feedbacks";
+import feedbacksJson from "../../data/feedbacks/feedbacks.json";
 import InfiniteCarousel from "./infinite-carousel";
 
 const feedbacks: FeedbacksType[] = feedbacksJson as FeedbacksType[];
 
 const Feedbacks = () => {
   return (
-    <section className="py-12 bg-background relative overflow-hidden">
+    <section
+      id="feedbacks"
+      className="py-12 bg-background relative overflow-hidden"
+    >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-[#ca993d]/20 to-transparent" />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8 relative z-10">

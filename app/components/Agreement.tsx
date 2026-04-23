@@ -10,7 +10,10 @@ import { Button } from "./ui/button";
 const Agreement = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
-    <section className="py-8 bg-background2 relative overflow-hidden">
+    <section
+      id="agreement"
+      className="py-8 bg-background2 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div

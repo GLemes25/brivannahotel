@@ -2,12 +2,17 @@
 
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
+import BusinessStatusIndicator from "@/app/components/BusinessStatusIndicator";
 import { CATEGORIES } from "@/app/data/indications/categories";
 import indicationsData from "@/app/data/indications/indications.json";
 import { ArrowLeft, ExternalLink, Navigation } from "lucide-react";
 import { motion } from "motion/react";
 import { useParams, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
+
+type TimeSlot = { open: string; close: string };
+type DaySchedule = TimeSlot | TimeSlot[];
+type Schedule = { is24h?: boolean } & { [key: string]: DaySchedule | boolean | undefined };
 
 type Indication = {
   id: string;
@@ -19,7 +24,7 @@ type Indication = {
   mapUrl: string;
   tags?: string[];
   businessHours?: string;
-  isOpenNow?: boolean;
+  schedule?: Schedule;
 };
 
 const CategoryPage = () => {
@@ -192,39 +197,11 @@ const CategoryPage = () => {
                       </div>
                     </div>
 
-                    {(place.isOpenNow !== undefined || place.businessHours) && (
-                      <div className="flex items-center gap-2 mb-5 mt-1">
-                        {place.isOpenNow !== undefined && (
-                          <>
-                            <div
-                              className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                                place.isOpenNow
-                                  ? "bg-emerald-500/80"
-                                  : "bg-rose-500/50"
-                              }`}
-                            />
-                            <span
-                              className={`text-xs font-light tracking-wide ${
-                                place.isOpenNow
-                                  ? "text-white/70"
-                                  : "text-rose-300/50"
-                              }`}
-                            >
-                              {place.isOpenNow ? "Aberto agora" : "Fechado"}
-                            </span>
-                          </>
-                        )}
-                        {place.businessHours && (
-                          <>
-                            <span className="text-white/20 text-xs select-none">
-                              •
-                            </span>
-                            <span className="text-xs text-muted-foreground font-light tracking-wide">
-                              {place.businessHours}
-                            </span>
-                          </>
-                        )}
-                      </div>
+                    {place.schedule && place.businessHours && (
+                      <BusinessStatusIndicator
+                        schedule={place.schedule}
+                        businessHours={place.businessHours}
+                      />
                     )}
 
                     <div className="w-16 h-[1px] bg-gradient-to-r from-[#ca993d] to-transparent mb-8" />

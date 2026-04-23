@@ -1,47 +1,107 @@
 [
   {
     "id": "laundry-001",
-    "name": "Clean & Go Lavanderia",
+    "name": "Lavanderia Water Clean",
     "categorySlug": "laundries",
-    "description": "Serviço expresso de lavagem e passagem com entrega em domicílio disponível.",
-    "distance": "300 m",
-    "instagramUrl": "https://instagram.com/cleangolavanderia",
-    "mapUrl": "https://maps.google.com/?q=Clean+Go+Lavanderia+Campo+Grande+MS",
-    "businessHours": "Seg a Sáb · 8h às 20h",
-    "isOpenNow": false
+    "description": "(67) 3384-8890",
+    "distance": "2 km",
+    "instagramUrl": "https://instagram.com/watercleanlavanderia/",
+    "mapUrl": "https://maps.app.goo.gl/HqqWgPHtkKuaf1Jc7",
+    "businessHours": "Seg a Sáb · 8h às 19h",
+    "schedule": {
+      "1": { "open": "08:00", "close": "19:00" },
+      "2": { "open": "08:00", "close": "19:00" },
+      "3": { "open": "08:00", "close": "19:00" },
+      "4": { "open": "08:00", "close": "19:00" },
+      "5": { "open": "08:00", "close": "19:00" },
+      "6": { "open": "08:00", "close": "19:00" }
+    }
   },
   {
     "id": "laundry-002",
-    "name": "Lavanderia Boa Vista",
+    "name": "Lavanderia Aquarela",
     "categorySlug": "laundries",
-    "description": "Especializada em lavagem a seco para roupas delicadas, sociais e uniformes.",
-    "distance": "650 m",
-    "instagramUrl": "https://instagram.com/lavanderiaboavista",
-    "mapUrl": "https://maps.google.com/?q=Lavanderia+Boa+Vista+Campo+Grande+MS",
-    "businessHours": "Seg a Sex · 8h às 18h",
-    "isOpenNow": false
+    "description": "https://publicary.my.canva.site/aquarela-lavanderia",
+    "distance": "1,2 km",
+    "instagramUrl": "https://instagram.com/lavanderiaaquarela/",
+    "mapUrl": "https://maps.app.goo.gl/M441yaXztxTh2FTm6",
+    "businessHours": "Seg a Sáb · 7h às 17h30",
+    "schedule": {
+      "1": { "open": "07:00", "close": "17:30" },
+      "2": { "open": "07:00", "close": "17:30" },
+      "3": { "open": "07:00", "close": "17:30" },
+      "4": { "open": "07:00", "close": "17:30" },
+      "5": { "open": "07:00", "close": "17:30" },
+      "6": { "open": "07:00", "close": "17:30" }
+    }
+  },
+  {
+    "id": "laundry-003",
+    "name": "Laundromat Lavanderia Self-Service",
+    "categorySlug": "laundries",
+    "description": "(11) 4210-3894",
+    "distance": "1,4 km",
+    "instagramUrl": "https://instagram.com/laundromatbrasil/",
+    "mapUrl": "https://maps.app.goo.gl/nLww6FHiumSHD4dw9",
+    "businessHours": "Seg a Sáb · 6h às 21h00; dom · 7h às 19h00 ",
+    "schedule": {
+      "0": { "open": "07:00", "close": "19:00" },
+      "1": { "open": "06:00", "close": "21:00" },
+      "2": { "open": "06:00", "close": "21:00" },
+      "3": { "open": "06:00", "close": "21:00" },
+      "4": { "open": "06:00", "close": "21:00" },
+      "5": { "open": "06:00", "close": "21:00" },
+      "6": { "open": "06:00", "close": "21:00" }
+    }
+  },
+  {
+    "id": "laundry-004",
+    "name": "Lavanderia Lavô Campo Grande",
+    "categorySlug": "laundries",
+    "description": "(67) 99221-0449",
+    "distance": "1,8 km",
+    "instagramUrl": "https://instagram.com/lavocampogrande/",
+    "mapUrl": "https://maps.app.goo.gl/AR69uW6YAcEYbGhy7",
+    "businessHours": "24 horas",
+    "schedule": { "is24h": true }
   },
   {
     "id": "burger-001",
-    "name": "Burguer da Praça",
+    "name": "Gugu Lanches",
     "categorySlug": "burger-joints",
-    "description": "Artesanal no capricho, com blend especial de carnes nobres e pão brioche fresquinho.",
-    "distance": "400 m",
+    "description": "https://gugu-lanches.wherebly.com/",
+    "distance": "280 m",
     "instagramUrl": "https://instagram.com/burguerdapraca",
-    "mapUrl": "https://maps.google.com/?q=Burguer+da+Praca+Campo+Grande+MS",
-    "businessHours": "Ter a Dom · 18h às 23h",
-    "isOpenNow": true
+    "mapUrl": "https://maps.app.goo.gl/vt3T5ijb3jat6w979",
+    "businessHours": "Dom a Qui · 09h às 01h; Sex e Sáb · 09h às 05h",
+    "schedule": {
+      "0": { "open": "09:00", "close": "01:00" },
+      "1": { "open": "09:00", "close": "01:00" },
+      "2": { "open": "09:00", "close": "01:00" },
+      "3": { "open": "09:00", "close": "01:00" },
+      "4": { "open": "09:00", "close": "01:00" },
+      "5": { "open": "09:00", "close": "05:00" },
+      "6": { "open": "09:00", "close": "05:00" }
+    }
   },
   {
     "id": "burger-002",
-    "name": "Smash Kings",
+    "name": "Madero & Jeronimo Track Campo Grande",
     "categorySlug": "burger-joints",
-    "description": "Smash burgers crocantes com ingredientes selecionados e molhos autorais imperdíveis.",
-    "distance": "800 m",
-    "instagramUrl": "https://instagram.com/smashkingscg",
-    "mapUrl": "https://maps.google.com/?q=Smash+Kings+Campo+Grande+MS",
+    "description": "https://maps.app.goo.gl/XXQcqc6pvoQ4cKKR9",
+    "distance": "2,6 km",
+    "instagramUrl": "https://instagram.com/jeronimoburger",
+    "mapUrl": "https://maps.app.goo.gl/XXQcqc6pvoQ4cKKR9",
     "businessHours": "Qua a Dom · 17h às 23h",
-    "isOpenNow": true
+    "schedule": {
+      "0": { "open": "11:30", "close": "23:00" },
+      "1": { "open": "11:30", "close": "23:00" },
+      "2": { "open": "11:30", "close": "23:00" },
+      "3": { "open": "11:30", "close": "23:00" },
+      "4": { "open": "11:30", "close": "23:00" },
+      "5": { "open": "11:30", "close": "23:00" },
+      "6": { "open": "11:30", "close": "23:00" }
+    }
   },
   {
     "id": "restaurant-001",
@@ -52,7 +112,32 @@
     "instagramUrl": "https://instagram.com/sabordocerrado",
     "mapUrl": "https://maps.google.com/?q=Sabor+do+Cerrado+Campo+Grande+MS",
     "businessHours": "Ter a Dom · 12h às 15h e 19h às 22h",
-    "isOpenNow": false
+    "schedule": {
+      "2": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "22:00" }
+      ],
+      "3": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "22:00" }
+      ],
+      "4": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "22:00" }
+      ],
+      "5": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "22:00" }
+      ],
+      "6": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "22:00" }
+      ],
+      "0": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "22:00" }
+      ]
+    }
   },
   {
     "id": "restaurant-002",
@@ -63,7 +148,14 @@
     "instagramUrl": "https://instagram.com/donmarcocg",
     "mapUrl": "https://maps.google.com/?q=Cantina+Don+Marco+Campo+Grande+MS",
     "businessHours": "Seg a Sáb · 11h30 às 22h",
-    "isOpenNow": false
+    "schedule": {
+      "1": { "open": "11:30", "close": "22:00" },
+      "2": { "open": "11:30", "close": "22:00" },
+      "3": { "open": "11:30", "close": "22:00" },
+      "4": { "open": "11:30", "close": "22:00" },
+      "5": { "open": "11:30", "close": "22:00" },
+      "6": { "open": "11:30", "close": "22:00" }
+    }
   },
   {
     "id": "restaurant-003",
@@ -74,7 +166,32 @@
     "instagramUrl": "https://instagram.com/grill45cg",
     "mapUrl": "https://maps.google.com/?q=Grill+45+Campo+Grande+MS",
     "businessHours": "Ter a Dom · 12h às 15h e 19h às 23h",
-    "isOpenNow": false
+    "schedule": {
+      "2": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "23:00" }
+      ],
+      "3": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "23:00" }
+      ],
+      "4": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "23:00" }
+      ],
+      "5": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "23:00" }
+      ],
+      "6": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "23:00" }
+      ],
+      "0": [
+        { "open": "12:00", "close": "15:00" },
+        { "open": "19:00", "close": "23:00" }
+      ]
+    }
   },
   {
     "id": "pizzeria-001",
@@ -85,7 +202,14 @@
     "instagramUrl": "https://instagram.com/fornodinapolicg",
     "mapUrl": "https://maps.google.com/?q=Forno+di+Napoli+Campo+Grande+MS",
     "businessHours": "Ter a Dom · 18h às 23h30",
-    "isOpenNow": false
+    "schedule": {
+      "2": { "open": "18:00", "close": "23:30" },
+      "3": { "open": "18:00", "close": "23:30" },
+      "4": { "open": "18:00", "close": "23:30" },
+      "5": { "open": "18:00", "close": "23:30" },
+      "6": { "open": "18:00", "close": "23:30" },
+      "0": { "open": "18:00", "close": "23:30" }
+    }
   },
   {
     "id": "pizzeria-002",
@@ -96,7 +220,15 @@
     "instagramUrl": "https://instagram.com/lastradapizzacg",
     "mapUrl": "https://maps.google.com/?q=Pizzaria+La+Strada+Campo+Grande+MS",
     "businessHours": "Seg a Dom · 18h às 23h",
-    "isOpenNow": false
+    "schedule": {
+      "0": { "open": "18:00", "close": "23:00" },
+      "1": { "open": "18:00", "close": "23:00" },
+      "2": { "open": "18:00", "close": "23:00" },
+      "3": { "open": "18:00", "close": "23:00" },
+      "4": { "open": "18:00", "close": "23:00" },
+      "5": { "open": "18:00", "close": "23:00" },
+      "6": { "open": "18:00", "close": "23:00" }
+    }
   },
   {
     "id": "tourist-001",
@@ -107,7 +239,14 @@
     "instagramUrl": "https://instagram.com/parquenacoescg",
     "mapUrl": "https://maps.google.com/?q=Parque+das+Nacoes+Indigenas+Campo+Grande+MS",
     "businessHours": "Ter a Dom · 7h às 19h",
-    "isOpenNow": false
+    "schedule": {
+      "2": { "open": "07:00", "close": "19:00" },
+      "3": { "open": "07:00", "close": "19:00" },
+      "4": { "open": "07:00", "close": "19:00" },
+      "5": { "open": "07:00", "close": "19:00" },
+      "6": { "open": "07:00", "close": "19:00" },
+      "0": { "open": "07:00", "close": "19:00" }
+    }
   },
   {
     "id": "tourist-002",
@@ -118,7 +257,14 @@
     "instagramUrl": "https://instagram.com/mercadaocg",
     "mapUrl": "https://maps.google.com/?q=Mercadao+Municipal+Campo+Grande+MS",
     "businessHours": "Seg a Sáb · 7h às 18h",
-    "isOpenNow": false
+    "schedule": {
+      "1": { "open": "07:00", "close": "18:00" },
+      "2": { "open": "07:00", "close": "18:00" },
+      "3": { "open": "07:00", "close": "18:00" },
+      "4": { "open": "07:00", "close": "18:00" },
+      "5": { "open": "07:00", "close": "18:00" },
+      "6": { "open": "07:00", "close": "18:00" }
+    }
   },
   {
     "id": "supermarket-001",
@@ -129,7 +275,15 @@
     "instagramUrl": "https://instagram.com/compersupermercados",
     "mapUrl": "https://maps.google.com/?q=Comper+Supermercados+Campo+Grande+MS",
     "businessHours": "Seg a Dom · 7h às 22h",
-    "isOpenNow": true
+    "schedule": {
+      "0": { "open": "07:00", "close": "22:00" },
+      "1": { "open": "07:00", "close": "22:00" },
+      "2": { "open": "07:00", "close": "22:00" },
+      "3": { "open": "07:00", "close": "22:00" },
+      "4": { "open": "07:00", "close": "22:00" },
+      "5": { "open": "07:00", "close": "22:00" },
+      "6": { "open": "07:00", "close": "22:00" }
+    }
   },
   {
     "id": "supermarket-002",
@@ -140,7 +294,15 @@
     "instagramUrl": "https://instagram.com/atacadaobrasil",
     "mapUrl": "https://maps.google.com/?q=Atacadao+Campo+Grande+MS",
     "businessHours": "Seg a Dom · 8h às 22h",
-    "isOpenNow": true
+    "schedule": {
+      "0": { "open": "08:00", "close": "22:00" },
+      "1": { "open": "08:00", "close": "22:00" },
+      "2": { "open": "08:00", "close": "22:00" },
+      "3": { "open": "08:00", "close": "22:00" },
+      "4": { "open": "08:00", "close": "22:00" },
+      "5": { "open": "08:00", "close": "22:00" },
+      "6": { "open": "08:00", "close": "22:00" }
+    }
   },
   {
     "id": "pharmacy-001",
@@ -151,7 +313,7 @@
     "instagramUrl": "https://instagram.com/farmacianissel",
     "mapUrl": "https://maps.google.com/?q=Farmacia+Nissei+Campo+Grande+MS",
     "businessHours": "24 horas",
-    "isOpenNow": true
+    "schedule": { "is24h": true }
   },
   {
     "id": "pharmacy-002",
@@ -162,7 +324,7 @@
     "instagramUrl": "https://instagram.com/drogaraia",
     "mapUrl": "https://maps.google.com/?q=Droga+Raia+Campo+Grande+MS",
     "businessHours": "24 horas",
-    "isOpenNow": true
+    "schedule": { "is24h": true }
   },
   {
     "id": "airport-001",
@@ -173,7 +335,7 @@
     "instagramUrl": "https://instagram.com/aeroportocg",
     "mapUrl": "https://maps.google.com/?q=Aeroporto+Internacional+Campo+Grande+MS",
     "businessHours": "Todos os dias · 24 horas",
-    "isOpenNow": true
+    "schedule": { "is24h": true }
   },
   {
     "id": "airport-002",
@@ -184,7 +346,15 @@
     "instagramUrl": "https://instagram.com/rodoviariocg",
     "mapUrl": "https://maps.google.com/?q=Terminal+Rodoviario+Morenao+Campo+Grande+MS",
     "businessHours": "Todos os dias · 5h às 23h",
-    "isOpenNow": true
+    "schedule": {
+      "0": { "open": "05:00", "close": "23:00" },
+      "1": { "open": "05:00", "close": "23:00" },
+      "2": { "open": "05:00", "close": "23:00" },
+      "3": { "open": "05:00", "close": "23:00" },
+      "4": { "open": "05:00", "close": "23:00" },
+      "5": { "open": "05:00", "close": "23:00" },
+      "6": { "open": "05:00", "close": "23:00" }
+    }
   },
   {
     "id": "gym-001",
@@ -195,7 +365,15 @@
     "instagramUrl": "https://instagram.com/smartfit",
     "mapUrl": "https://maps.google.com/?q=Smart+Fit+Campo+Grande+MS",
     "businessHours": "Seg a Sex · 5h às 23h · Sáb e Dom · 8h às 20h",
-    "isOpenNow": true
+    "schedule": {
+      "1": { "open": "05:00", "close": "23:00" },
+      "2": { "open": "05:00", "close": "23:00" },
+      "3": { "open": "05:00", "close": "23:00" },
+      "4": { "open": "05:00", "close": "23:00" },
+      "5": { "open": "05:00", "close": "23:00" },
+      "6": { "open": "08:00", "close": "20:00" },
+      "0": { "open": "08:00", "close": "20:00" }
+    }
   },
   {
     "id": "gym-002",
@@ -206,7 +384,15 @@
     "instagramUrl": "https://instagram.com/bodytechoficial",
     "mapUrl": "https://maps.google.com/?q=Bodytech+Campo+Grande+MS",
     "businessHours": "Seg a Sex · 6h às 22h · Sáb e Dom · 8h às 18h",
-    "isOpenNow": true
+    "schedule": {
+      "1": { "open": "06:00", "close": "22:00" },
+      "2": { "open": "06:00", "close": "22:00" },
+      "3": { "open": "06:00", "close": "22:00" },
+      "4": { "open": "06:00", "close": "22:00" },
+      "5": { "open": "06:00", "close": "22:00" },
+      "6": { "open": "08:00", "close": "18:00" },
+      "0": { "open": "08:00", "close": "18:00" }
+    }
   },
   {
     "id": "bar-001",
@@ -218,7 +404,13 @@
     "mapUrl": "https://maps.google.com/?q=Bar+do+Mane+Campo+Grande+MS",
     "tags": ["Boteco raiz", "Sertanejo"],
     "businessHours": "Qua a Dom · 17h às 01h",
-    "isOpenNow": true
+    "schedule": {
+      "3": { "open": "17:00", "close": "01:00" },
+      "4": { "open": "17:00", "close": "01:00" },
+      "5": { "open": "17:00", "close": "01:00" },
+      "6": { "open": "17:00", "close": "01:00" },
+      "0": { "open": "17:00", "close": "01:00" }
+    }
   },
   {
     "id": "bar-002",
@@ -230,6 +422,11 @@
     "mapUrl": "https://maps.google.com/?q=Roots+Craft+Bar+Campo+Grande+MS",
     "tags": ["Rock", "Artesanal"],
     "businessHours": "Qui a Dom · 18h às 02h",
-    "isOpenNow": true
+    "schedule": {
+      "4": { "open": "18:00", "close": "02:00" },
+      "5": { "open": "18:00", "close": "02:00" },
+      "6": { "open": "18:00", "close": "02:00" },
+      "0": { "open": "18:00", "close": "02:00" }
+    }
   }
 ]

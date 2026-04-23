@@ -14,7 +14,7 @@ const highlights = [
 const About = () => {
   return (
     <section
-      id="sobre"
+      id="about"
       className="py-12 bg-background relative overflow-hidden"
     >
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-[#ca993d]/5 rounded-full blur-[100px] pointer-events-none" />

@@ -10,7 +10,7 @@ const EMBED_URL = "https://www.google.com/maps?q=brivanna+hotel&output=embed";
 const Location = () => {
   return (
     <section
-      id="localizacao"
+      id="location"
       className="bg-background py-12 overflow-hidden relative"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12 md:mb-16">

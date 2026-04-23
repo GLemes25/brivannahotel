@@ -7,7 +7,10 @@ import { RegulationSection } from "./RegulationSection";
 const rules = regulationsData.regulations as RegulationsType[];
 
 const Regulations = () => (
-  <section className="bg-background2 py-12 relative overflow-hidden min-h-screen flex flex-col justify-center">
+  <section
+    id="regulations"
+    className="bg-background2 py-12 relative overflow-hidden min-h-screen flex flex-col justify-center"
+  >
     {/* Linha Decorativa Superior */}
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-[#ca993d]/30 to-transparent" />
 
