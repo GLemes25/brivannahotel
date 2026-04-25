@@ -11,7 +11,6 @@ import PageLoader from "./components/PageLoader";
 import Parking from "./components/Parking";
 import Regulations from "./components/regulations/Regulations";
 import Rooms from "./components/Rooms";
-import ScrollToTop from "./components/ScrollToTop";
 import SEO from "./components/SEO";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -36,7 +35,6 @@ export default function Home() {
           <Indications />
         </main>
         <Footer />
-        <ScrollToTop />
         <WhatsAppButton />
       </div>
     </>
