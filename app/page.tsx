@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Agreement from "./components/Agreement";
+import Agreement from "./components/agreement/Agreement";
 import BookingWidget from "./components/bookingWidget/BookingWidget";
 import Feedbacks from "./components/feedbacks/Feedbacks";
 import Footer from "./components/Footer";

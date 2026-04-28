@@ -32,7 +32,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { whatsappMessage } from "../helpers";
+import { whatsappMessage } from "../../helpers";
 
 const validateCNPJ = (cnpj: string) => {
   const cleaned = cnpj.replace(/\D/g, "");

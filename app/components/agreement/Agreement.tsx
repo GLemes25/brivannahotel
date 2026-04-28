@@ -4,8 +4,8 @@ import { Handshake } from "lucide-react";
 import { motion } from "motion/react";
 
 import { useState } from "react";
+import { Button } from "../ui/button";
 import AgreementDialog from "./AgreementDialog";
-import { Button } from "./ui/button";
 
 const Agreement = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
