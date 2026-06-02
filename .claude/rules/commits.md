@@ -38,3 +38,7 @@ Use estes commits passados do repositório como seu padrão de tom e estrutura:
 2. Gere a mensagem de commit apropriada silenciosamente em inglês.
 3. Execute automaticamente o comando do git: `git commit -m "<mensagem_gerada>"`
 4. Exiba uma breve confirmação de sucesso mostrando a mensagem que foi commitada.
+
+## 5. Regra Crítica — Nunca Commitar Sem Autorização
+
+**NUNCA** execute um commit sem que o usuário tenha pedido explicitamente. Mesmo ao concluir uma task ou implementação, apenas escreva o código. Aguarde o comando do usuário antes de qualquer `git commit` ou `git add`.
