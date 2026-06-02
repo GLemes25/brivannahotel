@@ -1,13 +1,20 @@
 "use client";
 
 import dayjs from "dayjs";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
 import { useEffect, useState } from "react";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 type TimeSlot = { open: string; close: string };
 type DaySchedule = TimeSlot | TimeSlot[];
 type Schedule = { is24h?: boolean } & { [key: string]: DaySchedule | boolean | undefined };
 
 export type BusinessStatus = "24H" | "OPEN" | "CLOSING_SOON" | "OPENS_SOON" | "CLOSED";
+
+const TIMEZONE = "America/Campo_Grande";
 
 const toMinutes = (time: string): number => {
   const [h, m] = time.split(":").map(Number);
@@ -40,7 +47,7 @@ const evaluateSlot = (
 const computeStatus = (schedule: Schedule): BusinessStatus => {
   if (schedule.is24h) return "24H";
 
-  const now = dayjs();
+  const now = dayjs().tz(TIMEZONE);
   const dayOfWeek = now.day();
   const currentMinutes = now.hour() * 60 + now.minute();
 
@@ -82,8 +89,8 @@ const computeStatus = (schedule: Schedule): BusinessStatus => {
   return "CLOSED";
 };
 
-const useBusinessStatus = (schedule: Schedule): BusinessStatus => {
-  const [status, setStatus] = useState<BusinessStatus>(() => computeStatus(schedule));
+const useBusinessStatus = (schedule: Schedule): BusinessStatus | null => {
+  const [status, setStatus] = useState<BusinessStatus | null>(null);
 
   useEffect(() => {
     setStatus(computeStatus(schedule));

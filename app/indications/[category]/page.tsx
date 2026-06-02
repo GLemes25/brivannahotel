@@ -1,8 +1,8 @@
 "use client";
 
-import BusinessStatusIndicator from "@/app/components/BusinessStatusIndicator";
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
+import BusinessStatusIndicator from "@/app/components/BusinessStatusIndicator";
 import { CATEGORIES } from "@/app/data/indications/categories";
 import indicationsData from "@/app/data/indications/indications.json";
 import { ArrowLeft, ExternalLink, Link, Navigation } from "lucide-react";
@@ -10,11 +10,7 @@ import { motion } from "motion/react";
 import { useParams, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
-type TimeSlot = { open: string; close: string };
-type DaySchedule = TimeSlot | TimeSlot[];
-type Schedule = { is24h?: boolean } & {
-  [key: string]: DaySchedule | boolean | undefined;
-};
+import type { Schedule } from "@/app/components/BusinessStatusIndicator";
 
 type Indication = {
   id: string;
