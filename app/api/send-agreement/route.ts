@@ -1,4 +1,4 @@
-import brivannaData from "@/app/data/brivanna.json";
+import { brivannaData } from "@/app/data/brivanna";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 

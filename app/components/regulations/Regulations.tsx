@@ -1,10 +1,9 @@
 "use client";
 
-import type { RegulationsType } from "@/app/data/regulations/regulations";
-import regulationsData from "@/app/data/regulations/regulations.json";
+import { regulationsData, type RegulationsType } from "@/app/data/regulations";
 import { RegulationSection } from "./RegulationSection";
 
-const rules = regulationsData.regulations as RegulationsType[];
+const rules: RegulationsType[] = regulationsData;
 
 const Regulations = () => (
   <section

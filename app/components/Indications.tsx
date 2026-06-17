@@ -1,6 +1,6 @@
 "use client";
 
-import { CATEGORIES } from "@/app/data/indications/categories";
+import { CATEGORIES } from "@/app/data/indications";
 import { motion } from "motion/react";
 import Link from "next/link";
 

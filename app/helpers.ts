@@ -1,4 +1,4 @@
-import brivannaData from "@/app/data/brivanna.json";
+import { brivannaData } from "@/app/data/brivanna";
 
 export const whatsappMessage = (message?: string) => {
   const whatsappNumber = brivannaData.whatsappNumber;

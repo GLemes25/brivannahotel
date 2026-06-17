@@ -3,27 +3,13 @@
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
 import BusinessStatusIndicator from "@/app/components/BusinessStatusIndicator";
-import { CATEGORIES } from "@/app/data/indications/categories";
-import indicationsData from "@/app/data/indications/indications.json";
+import { CATEGORIES, indicationsData, type Indication } from "@/app/data/indications";
 import { ArrowLeft, ExternalLink, Link, Navigation } from "lucide-react";
 import { motion } from "motion/react";
 import { useParams, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import type { Schedule } from "@/app/components/BusinessStatusIndicator";
 
-type Indication = {
-  id: string;
-  name: string;
-  categorySlug: string;
-  description: string;
-  distance: string;
-  instagramUrl: string;
-  mapUrl: string;
-  tags?: string[];
-  businessHours?: string;
-  schedule?: Schedule;
-};
 
 const CategoryPage = () => {
   const params = useParams();

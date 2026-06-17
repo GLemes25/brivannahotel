@@ -1,6 +1,6 @@
 "use client";
 
-import brivannaData from "@/app/data/brivanna.json";
+import { brivannaData } from "@/app/data/brivanna";
 import dayjs from "dayjs";
 import { Instagram, Mail, MapPin, Phone, PhoneIcon } from "lucide-react";
 import { motion } from "motion/react";

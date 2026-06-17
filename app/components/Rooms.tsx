@@ -4,13 +4,11 @@ import { Users } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 
-import { amenityMap } from "../data/rooms/amenities";
-import { Room } from "../data/rooms/rooms";
-import roomsJson from "../data/rooms/rooms.json";
+import { amenityMap, Room, roomsData } from "@/app/data/rooms";
 
 const MotionButton = motion(Button);
 
-const rooms: Room[] = roomsJson as Room[];
+const rooms: Room[] = roomsData;
 
 const Rooms = () => {
   const scrollToBooking = () => {

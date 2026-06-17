@@ -1,0 +1,51 @@
+import { Refrigerator, Tv, Wifi, Wind } from "lucide-react";
+
+export const amenityMap = {
+  wifi: { icon: Wifi, label: "Wi-Fi" },
+  ac: { icon: Wind, label: "Ar-condicionado" },
+  fridge: { icon: Refrigerator, label: "Frigobar" },
+  tv: { icon: Tv, label: "Tv" },
+} as const;
+
+export type AmenityKey = keyof typeof amenityMap;
+export type Amenity = (typeof amenityMap)[AmenityKey];
+
+export type Room = {
+  name: string;
+  description: string;
+  image: string;
+  capacity: string;
+  priceRange: string;
+  featured?: boolean;
+  amenities: AmenityKey[];
+};
+
+export const roomsData: Room[] = [
+  {
+    name: "Quarto Individual",
+    description: "Perfeito para viajantes solo. Confortável e funcional.",
+    image: "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468006/Quarto-Individual_xigs0n.png",
+    capacity: "1 pessoa",
+    priceRange: "A partir de R$ 120",
+    featured: true,
+    amenities: ["wifi", "ac", "fridge", "tv"],
+  },
+  {
+    name: "Quarto Duplo",
+    description: "Perfeito para companheiros de viagem, contando com duas camas solteiros.",
+    image: "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468005/Quarto-Duplo-1024x459_cukoiv.png",
+    capacity: "2 pessoas",
+    priceRange: "A partir de R$ 150",
+    featured: false,
+    amenities: ["wifi", "ac", "fridge", "tv"],
+  },
+  {
+    name: "Quarto Triplo",
+    description: "Quarto planejado para Familias, com cama de casal e de solteiro",
+    image: "https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774468011/Quarto-Triplo-Casal_1_hm4vdo.png",
+    capacity: "3 pessoas",
+    priceRange: "A partir de R$ 190",
+    featured: false,
+    amenities: ["wifi", "ac", "fridge", "tv"],
+  },
+];

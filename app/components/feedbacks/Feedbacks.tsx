@@ -1,10 +1,9 @@
 "use client";
 
-import { FeedbacksType } from "../../data/feedbacks/feedbacks";
-import feedbacksJson from "../../data/feedbacks/feedbacks.json";
+import { feedbacksData, type FeedbacksType } from "@/app/data/feedbacks";
 import InfiniteCarousel from "./infinite-carousel";
 
-const feedbacks: FeedbacksType[] = feedbacksJson as FeedbacksType[];
+const feedbacks: FeedbacksType[] = feedbacksData;
 
 const Feedbacks = () => {
   return (

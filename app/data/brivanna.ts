@@ -1,0 +1,9 @@
+export const brivannaData = {
+  name: "Hotel Brivanna",
+  email: "admbrivanna@gmail.com",
+  phone: "+55 67 9879-1764",
+  whatsappNumber: "5567998791764",
+  address: "R. Joaquim Nabuco, 50 - Amambai, Campo Grande - MS, 79008-340",
+  instagramUrl: "https://www.instagram.com/brivannahotel",
+  websiteUrl: "https://brivannahotel.com.br",
+};

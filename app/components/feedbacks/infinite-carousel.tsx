@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FeedbacksType } from "../../data/feedbacks/feedbacks";
+import { type FeedbacksType } from "@/app/data/feedbacks";
 import FeedbackCard from "./FeedbackCard";
 
 type InfiniteCarouselPropsType = {
