@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/app/components/ui/button";
+import { trackInitiateCheckout } from "@/app/lib/meta-pixel";
 import dayjs from "dayjs";
 import { Calendar, Search, Ticket, Users } from "lucide-react";
 import { useState } from "react";
@@ -56,6 +57,7 @@ const BookingWidget = () => {
 
   const handleSearch = () => {
     if (!isReady) return;
+    trackInitiateCheckout();
     window.open(buildBookingUrl(state), "_blank", "noopener,noreferrer");
   };
 

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/gabriel/Documents/projects/brivannahotel status)",
+      "Bash(git -C /home/gabriel/Documents/projects/brivannahotel diff --cached)",
+      "Bash(git -C /home/gabriel/Documents/projects/brivannahotel add app/api/send-agreement/route.ts app/components/Footer.tsx app/components/Indications.tsx app/components/Rooms.tsx app/components/feedbacks/FeedbackCard.tsx app/components/feedbacks/Feedbacks.tsx app/components/feedbacks/infinite-carousel.tsx app/components/regulations/RegulationSection.tsx app/components/regulations/Regulations.tsx app/data/brivanna.json app/data/feedbacks/ app/data/indications/ app/data/regulations/ app/data/rooms/ app/helpers.ts app/indications/[category]/page.tsx app/data/brivanna.ts app/data/feedbacks.ts app/data/indications.ts app/data/regulations.ts app/data/rooms.ts tasks/14.md)",
+      "Bash(git -C /home/gabriel/Documents/projects/brivannahotel commit -m ' *)"
+    ]
+  }
+}

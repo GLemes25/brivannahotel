@@ -1,5 +1,6 @@
 "use client";
 import { NAV_LINKS } from "@/app/data/navigation";
+import { trackInitiateCheckout } from "@/app/lib/meta-pixel";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -82,7 +83,10 @@ const Header = () => {
                   boxShadow: "0 0 25px rgba(202, 153, 61, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection("booking-widget")}
+                onClick={() => {
+                  trackInitiateCheckout();
+                  scrollToSection("booking-widget");
+                }}
                 className="bg-primary text-primary-foreground hover:brightness-110 text-[15px] font-medium"
               >
                 Reserve agora
@@ -126,6 +130,7 @@ const Header = () => {
             <MotionButton
               whileTap={{ scale: 0.97 }}
               onClick={() => {
+                trackInitiateCheckout();
                 scrollToSection("booking-widget");
                 setIsMobileMenuOpen(false);
               }}
