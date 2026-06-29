@@ -43,6 +43,7 @@ Além do apelo visual, o sistema resolve problemas reais de hospitalidade, entre
 - 🕒 **Motor de Status em Tempo Real:** Cálculo algorítmico que cruza o horário local (Campo Grande - MS) com os dados dos estabelecimentos para exibir tags de "Aberto", "Fechado" ou "Abre em breve".
 - 💬 **Provas Sociais Dinâmicas:** Carrossel infinito integrado a avaliações reais de hóspedes do Booking.com.
 - 📱 **Mobile-First UX:** Interações pensadas para o toque (touch-friendly), menus fluidos e botões de contato ágeis.
+- 📊 **Rastreamento de Conversão (Meta Pixel):** Eventos `PageView` e `InitiateCheckout` mapeados ao funil de reserva, permitindo campanhas de remarketing baseadas em intenção de compra.
 
 ---
 
@@ -64,6 +65,7 @@ Além do apelo visual, o sistema resolve problemas reais de hospitalidade, entre
 ### Utilitários
 
 - Day.js (Manipulação de datas e horários em tempo real)
+- Meta Pixel (Rastreamento de eventos de marketing)
 
 ### Infraestrutura
 
@@ -80,6 +82,8 @@ Além do apelo visual, o sistema resolve problemas reais de hospitalidade, entre
 - 🧠 **Lógica de Tempo Real (Client-side):** Implementação de um hook complexo para interpretar horários de funcionamento em formato string/JSON, transformando-os em status dinâmicos (ex: fecha em menos de 1h) para melhorar a decisão do hóspede.
 
 - 🎢 **Animações Performáticas:** Uso inteligente do `requestAnimationFrame` combinado com Framer Motion para criar sliders infinitos e transições de página fluidas que não bloqueiam a _Main Thread_ do navegador.
+
+- 📡 **Arquitetura de Rastreamento (MarTech):** Implementação do Meta Pixel com separação de responsabilidades — componente isolado para inicialização/`PageView` injetado no layout raiz, e utilitário tipado para disparar `InitiateCheckout` nos pontos exatos do funil (intenção no Header e redirecionamento ao Motor de Reservas externo), garantindo dados precisos para campanhas de remarketing.
 
 ---
 
