@@ -28,7 +28,7 @@ const PageLoader = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: `url('https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774471098/Brivanna_Estabelecimento_ry0h9r.png')`,
+                backgroundImage: `url('https://res.cloudinary.com/dk7zfhbrj/image/upload/v1783452786/Hotel_Cinza_vqhsy3.png')`,
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/75 to-black/80" />

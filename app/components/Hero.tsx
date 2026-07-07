@@ -9,10 +9,10 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dk7zfhbrj/image/upload/v1774471098/Brivanna_Estabelecimento_ry0h9r.png')`,
+            backgroundImage: `url('https://res.cloudinary.com/dk7zfhbrj/image/upload/v1783452786/Hotel_Cinza_vqhsy3.png')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/15" />
       </div>
 
       <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
