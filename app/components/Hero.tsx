@@ -35,15 +35,15 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20"
       >
-        <div className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/20 rounded-full px-5 py-2">
-          <MapPin className="text-[#ca993d]" size={16} />
-          <span className="text-white text-sm font-light">
+        <div className="inline-flex items-center gap-2 bg-background/40 backdrop-blur-md border border-border rounded-full px-5 py-2">
+          <MapPin className="text-primary" size={16} />
+          <span className="text-foreground text-sm font-light">
             Centro de Campo Grande, MS
           </span>
         </div>
       </motion.div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
     </section>
   );
 };
