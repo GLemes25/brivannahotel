@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import ManagementButton from "./ManagementButton";
 import { Button } from "./ui/button";
 
 const MotionButton = motion(Button);
@@ -77,6 +78,7 @@ const Header = () => {
                   {link.label}
                 </Button>
               ))}
+              <ManagementButton />
               <MotionButton
                 whileHover={{
                   scale: 1.05,
@@ -93,14 +95,18 @@ const Header = () => {
               </MotionButton>
             </nav>
 
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden text-foreground hover:text-primary hover:bg-transparent transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </Button>
+            <div className="flex items-center gap-3 md:hidden">
+              <ManagementButton />
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-foreground hover:text-primary hover:bg-transparent transition-colors"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              </Button>
+            </div>
           </div>
         </div>
       </motion.header>
